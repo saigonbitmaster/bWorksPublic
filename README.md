@@ -1,17 +1,25 @@
 # bWorks
 http://bworks.app:4001/emp
+
 http://bworks.app:4001/jsk
+
 http://bworks.app:4001/cmn
+
 http://bworks.app:4001/cms
 
 ## Install & run dev
 
 ```
 git clone https://github.com/saigonbitmaster/bWorksPublic
+
 cd bWorksPublic
+
 yarn 
+
 yarn run-api
+
 yarn run-emp
+
 yarn run-jsk
 ```
 
@@ -19,7 +27,9 @@ yarn run-jsk
 
 ```
 make build-emp
+
 make build-jsk
+
 make build-cms
 ```
 
