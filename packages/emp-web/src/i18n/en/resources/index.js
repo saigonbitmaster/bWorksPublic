@@ -5,13 +5,13 @@ import geodistricts from './geodistricts';
 import geowards from './geowards';
 import geoquarters from './geoquarters';
 import dataloggers from './dataloggers';
-import watersourcegroups from './watersourcegroups';
-import watersources from './watersources';
+import bworkssourcegroups from './bworkssourcegroups';
+import bworkssources from './bworkssources';
 import sensors from './sensors';
 import meters from './meters';
 import pumps from './pumps';
-import waterstandards from './waterstandards';
-import waterparameters from './waterparameters';
+import bworksstandards from './bworksstandards';
+import bworksparameters from './bworksparameters';
 import measuremethods from './measuremethods';
 import interfacestandards from './interfacestandards';
 import srcconfigs from './srcconfigs';
@@ -32,13 +32,13 @@ export default {
   geowards,
   dataloggers,
   geoquarters,
-  watersourcegroups,
-  watersources,
+  bworkssourcegroups,
+  bworkssources,
   sensors,
   meters,
   pumps,
-  waterstandards,
-  waterparameters,
+  bworksstandards,
+  bworksparameters,
   measuremethods,
   interfacestandards,
   srcconfigs,

@@ -25,7 +25,7 @@ class ShowAlertThreshold extends Component {
               <TextField source="name" />
             </Grid>
             <Grid middle item xs={12} sm={6}>
-              <ReferenceField source="waterSourceId" reference="watersources" allowEmpty>
+              <ReferenceField source="bworksSourceId" reference="bworkssources" allowEmpty>
                 <TextField source="name" />
               </ReferenceField>
             </Grid>
@@ -48,7 +48,7 @@ class ShowAlertThreshold extends Component {
               />
             </Grid>
             <Grid middle item xs={12} sm={6}>
-              <ReferenceField source="waterParameterId" reference="waterparameters" allowEmpty>
+              <ReferenceField source="bworksParameterId" reference="bworksparameters" allowEmpty>
                 <TextField source="name" />
               </ReferenceField>
             </Grid>

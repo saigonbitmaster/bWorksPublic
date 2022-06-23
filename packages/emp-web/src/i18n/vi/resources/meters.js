@@ -21,7 +21,7 @@ export default {
     environmentalRating: 'Cấp bảo vệ IP',
     description: 'Mô tả',
     dataLoggerId: 'Thiết bị ghi/phát (data logger)',
-    waterSourceId: 'Dùng cho nguồn nước',
+    bworksSourceId: 'Dùng cho nguồn nước',
     outputOptionsIds: 'Giao tiếp đầu ra',
     materialStatus: 'Tình trạng',
     ...commonFields,

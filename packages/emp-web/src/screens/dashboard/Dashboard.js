@@ -16,10 +16,10 @@ class Dashboard extends React.Component {
   loadStatus = () => {
     const { dataProvider } = this.props;
     let { baseOnFlowLogger } = this.state;
-    dataProvider(CUSTOM, 'WaterSources', {
+    dataProvider(CUSTOM, 'bworksSources', {
       subUrl: 'dashboard',
       method: 'get',
-      query: { mode: baseOnFlowLogger ? 'dataLogger' : 'waterSource' },
+      query: { mode: baseOnFlowLogger ? 'dataLogger' : 'bworksSource' },
     }).then(res => {
       if (res) {
         this.setState({ currentStatus: res.data });

@@ -14,7 +14,7 @@ export default {
   numberAlertLow: 'Low alert count: %{val}',
   numberAlertCriticalLow: 'Critical low alert count: %{val}',
 
-  sumWaterSource: 'Water source count: %{val}',
+  sumbworksSource: 'bworks source count: %{val}',
   fields: {
     name: 'Name',
     prefix: 'Prefix',
@@ -29,8 +29,8 @@ export default {
     selectParameter: 'Select parameter',
     selectGroup: 'Select group',
     selectSource: 'Select source',
-    waterSourceName: 'Water source',
-    waterParameterName: 'Water parameter',
+    bworksSourceName: 'bworks source',
+    bworksParameterName: 'bworks parameter',
     logTime: 'logTime',
     avgValue: 'Value',
     alert: 'Status',

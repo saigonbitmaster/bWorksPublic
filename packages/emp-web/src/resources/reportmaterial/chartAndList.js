@@ -48,7 +48,7 @@ class ChartAndList extends Component {
       let ids = report.list.ids;
       let data1 = ids.map(id => report.data[id]);
       let data = report.data;
-      let rawSourceList = data1.map(item => item.waterSource);
+      let rawSourceList = data1.map(item => item.bworksSource);
       let sourceList = Array.from(new Set(rawSourceList));
       // let tmp1 = 0,
       //   tmp2 = 0,
@@ -149,7 +149,7 @@ class ChartAndList extends Component {
       val: format.number(sumTotalPump, 0),
     });
     templateData.tableHeader = {
-      column01: translate('resources.reportmaterials.fields.waterSource'),
+      column01: translate('resources.reportmaterials.fields.bworksSource'),
       column02: translate('resources.reportmaterials.fields.materialStatus'),
       column03: translate('resources.reportmaterials.fields.sensor'),
       column04: translate('resources.reportmaterials.fields.meter'),
@@ -227,14 +227,14 @@ class ChartAndList extends Component {
             refController={refController}
             className="subheader"
             resource="reportmaterials"
-            fixUrl="watersources/reportmaterial"
+            fixUrl="bworkssources/reportmaterial"
             title={translate('generic.report.titleReportMaterial')}
             bulkActions={false}
             subTitle={subTitle}
             perPage={25}
           >
             <Datagrid>
-              <TextField source="waterSource" sortable={false} />
+              <TextField source="bworksSource" sortable={false} />
               <ColoredFunctionField
                 sortable={false}
                 source="materialStatus"

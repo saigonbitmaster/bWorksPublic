@@ -5,9 +5,9 @@ export default {
   center: { lat: 20.653947, lng: 105.927257 },
   mapDefaultZoom: 14,
   color: {
-    waterLossChart: {
-      WATERINPUT: '#3F51B5',
-      WATERREVENUE: '#4dbd74',
+    bworksLossChart: {
+      bworksINPUT: '#3F51B5',
+      bworksREVENUE: '#4dbd74',
       KNOWLEAK: '#FF9800',
       UNKNOWLEAK: '#ff5454',
     },
@@ -113,12 +113,12 @@ export default {
     { id: 'ClientRegister', name: 'generic.pages.clientRegister' },
   ],
   interfaceStandardType: [{ name: 'MM' }, { name: 'DM' }, { name: 'DD' }, { name: 'MD' }],
-  waterParameterStage: [
-    { id: '1', name: 'resources.waterstandards.fields.sourceWater' },
-    { id: '2', name: 'resources.waterstandards.fields.processingWater' },
-    { id: '3', name: 'resources.waterstandards.fields.freshWater' },
-    { id: '4', name: 'resources.waterstandards.fields.processingAndFreshWater' },
-    { id: '5', name: 'resources.waterstandards.fields.all' },
+  bworksParameterStage: [
+    { id: '1', name: 'resources.bworksstandards.fields.sourcebworks' },
+    { id: '2', name: 'resources.bworksstandards.fields.processingbworks' },
+    { id: '3', name: 'resources.bworksstandards.fields.freshbworks' },
+    { id: '4', name: 'resources.bworksstandards.fields.processingAndFreshbworks' },
+    { id: '5', name: 'resources.bworksstandards.fields.all' },
   ],
   environmentalRating: [{ name: 'IP65' }, { name: 'IP66' }, { name: 'IP67' }, { name: 'IP68' }, { name: 'IP69' }],
   powerSource: [
@@ -132,17 +132,17 @@ export default {
     { id: '3', name: 'resources.sensors.fields.bio' },
   ],
   typeOfPump: [
-    { id: '1', name: 'resources.pumps.fields.surfaceWaterPump' },
-    { id: '2', name: 'resources.pumps.fields.groundWaterPump' },
+    { id: '1', name: 'resources.pumps.fields.surfacebworksPump' },
+    { id: '2', name: 'resources.pumps.fields.groundbworksPump' },
   ],
-  typeOfWaterSource: [
-    { id: '1', name: 'resources.watersources.fields.surfaceWater' },
-    { id: '2', name: 'resources.watersources.fields.groundWater' },
+  typeOfbworksSource: [
+    { id: '1', name: 'resources.bworkssources.fields.surfacebworks' },
+    { id: '2', name: 'resources.bworkssources.fields.groundbworks' },
   ],
-  typeOfWaterSourceGroup: [
-    { id: 'ACTIVE', name: 'resources.watersourcegroups.fields.activeGroup' },
-    { id: 'BACKUP', name: 'resources.watersourcegroups.fields.backupGroup' },
-    { id: 'RESERVED', name: 'resources.watersourcegroups.fields.reservedGroup' },
+  typeOfbworksSourceGroup: [
+    { id: 'ACTIVE', name: 'resources.bworkssourcegroups.fields.activeGroup' },
+    { id: 'BACKUP', name: 'resources.bworkssourcegroups.fields.backupGroup' },
+    { id: 'RESERVED', name: 'resources.bworkssourcegroups.fields.reservedGroup' },
   ],
   alertType: [
     { id: '1', name: 'resources.alertthresholds.alertHigh' },
@@ -150,9 +150,9 @@ export default {
     { id: '3', name: 'resources.alertthresholds.alertHighAndLow' },
   ],
   sourceStatus: [
-    { id: '1', name: 'resources.watersources.fields.normal' },
-    { id: '2', name: 'resources.watersources.fields.inMaintain' },
-    { id: '3', name: 'resources.watersources.fields.isStopped' },
+    { id: '1', name: 'resources.bworkssources.fields.normal' },
+    { id: '2', name: 'resources.bworkssources.fields.inMaintain' },
+    { id: '3', name: 'resources.bworkssources.fields.isStopped' },
   ],
   alertParam: [
     { id: '1', name: 'resources.alertthresholds.alertQuality' },

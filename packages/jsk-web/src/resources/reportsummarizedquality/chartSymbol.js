@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import config from '../../Config';
 import ChartQuality from './ChartQuality';
-import FilterReportWaterSource from '../../components/common/filter/FilterReportWaterSource';
+import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
 const styles = theme => {
   return {
     paper: {
@@ -31,7 +31,7 @@ class ChartSymbol extends Component {
         .toDate(),
     },
     sourceGroup: 'all',
-    waterSource: 'all',
+    bworksSource: 'all',
   };
   selectAll = config.selectAll;
   state = {
@@ -40,17 +40,17 @@ class ChartSymbol extends Component {
   };
 
   queryReport = filter => {
-    // console.log('get data', filter, this.state.selectedWaterParam);
+    // console.log('get data', filter, this.state.selectedbworksParam);
     if (!filter) return;
     let cloneFilter = Object.assign({}, filter);
-    cloneFilter.waterParameterId = this.state.selectedWaterParam;
+    cloneFilter.bworksParameterId = this.state.selectedbworksParam;
     delete cloneFilter.sourceGroup;
     return this.statistic(cloneFilter);
   };
 
   statistic = async filter => {
     const { dataProvider } = this.props;
-    let res = await dataProvider(CUSTOM, 'watersources', {
+    let res = await dataProvider(CUSTOM, 'bworkssources', {
       method: 'get',
       subUrl: 'getDataChartStatisticQuality',
       query: { filter: JSON.stringify(filter) },
@@ -79,7 +79,7 @@ class ChartSymbol extends Component {
       <CustomPage title={title}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12}>
-            <FilterReportWaterSource
+            <FilterReportbworksSource
               formName={'wsrc-filter-statistic-quality-chart'}
               queryReport={this.queryReport}
               typeTimes={['hour', 'day']}

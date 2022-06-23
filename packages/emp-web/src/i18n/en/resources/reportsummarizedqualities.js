@@ -7,7 +7,7 @@ export default {
   minValue: 'Min value: %{val}',
   maxValue: 'Max value: %{val}',
   avgValue: 'Average value: %{val}',
-  sumWaterSource: 'Water source count: %{val}',
+  sumbworksSource: 'bworks source count: %{val}',
 
   fields: {
     name: 'Name',
@@ -23,8 +23,8 @@ export default {
     selectParameter: 'Select parameter',
     selectGroup: 'Select group',
     selectSource: 'Select source: %{val}',
-    waterSourceName: 'Water source name',
-    waterParameterName: 'Water parameter name',
+    bworksSourceName: 'bworks source name',
+    bworksParameterName: 'bworks parameter name',
     logTime: 'logTime',
     minValue: 'Min value',
     avgValue: 'Average value',

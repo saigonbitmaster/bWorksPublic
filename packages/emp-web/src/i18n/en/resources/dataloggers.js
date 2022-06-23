@@ -29,7 +29,7 @@ export default {
     inputOptionIds: 'Input option',
     outputOptionIds: 'Output option',
     materialStatus: 'Status',
-    waterSourceId: 'Water source',
+    bworksSourceId: 'bworks source',
     ...commonFields,
   },
   list: 'List',

@@ -36,7 +36,7 @@ class ListAlertThreshold extends Component {
             optionText="name"
             optionValue="id"
           />
-          <ReferenceField source="waterSourceId" reference="watersources" allowEmpty linkType={false}>
+          <ReferenceField source="bworksSourceId" reference="bworkssources" allowEmpty linkType={false}>
             <TextField source="name" />
           </ReferenceField>
           <SelectField
@@ -46,7 +46,7 @@ class ListAlertThreshold extends Component {
             optionText="name"
             optionValue="id"
           />
-          <ReferenceField source="waterParameterId" reference="waterparameters" allowEmpty linkType={false}>
+          <ReferenceField source="bworksParameterId" reference="bworksparameters" allowEmpty linkType={false}>
             <TextField source="name" />
           </ReferenceField>
           <NumberField source="alertHigh" />

@@ -13,7 +13,7 @@ export default {
   numberAlertHigh: 'Số cảnh báo cao: %{val}',
   numberAlertLow: 'Số cảnh báo thấp: %{val}',
   numberAlertCriticalLow: 'Số cảnh báo rất thấp: %{val}',
-  sumWaterSource: 'Tổng số nguồn: %{val}',
+  sumbworksSource: 'Tổng số nguồn: %{val}',
   fields: {
     name: 'Tên',
     prefix: 'Tiền tố',
@@ -28,7 +28,7 @@ export default {
     selectParameter: 'Chọn thông số chất lượng',
     selectGroup: 'Chọn nhóm nguồn',
     selectSource: 'Chọn nguồn nước',
-    waterSourceName: 'Nguồn nước',
+    bworksSourceName: 'Nguồn nước',
     logTime: 'Thời điểm',
     flowRate: 'Lưu lượng (m³/h)',
     alert: 'Cảnh báo',

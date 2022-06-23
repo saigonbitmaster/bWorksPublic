@@ -6,7 +6,7 @@ import { withTheme } from '@material-ui/core';
 import { ReportVolumeIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class WaterSourceStatistic extends Component {
+class bworksSourceStatistic extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -23,7 +23,7 @@ class WaterSourceStatistic extends Component {
 
   dashboardData = () => {
     this.props
-      .dataProvider(CUSTOM, 'WaterSources', {
+      .dataProvider(CUSTOM, 'bworksSources', {
         subUrl: 'dashboard',
         method: 'get',
         query: { mode: 'widget' },
@@ -54,10 +54,10 @@ class WaterSourceStatistic extends Component {
   }
 }
 
-WaterSourceStatistic.propTypes = {
+bworksSourceStatistic.propTypes = {
   translate: PropTypes.func,
   theme: PropTypes.object,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withTheme, withDataProvider);
-export default enhance(WaterSourceStatistic);
+export default enhance(bworksSourceStatistic);

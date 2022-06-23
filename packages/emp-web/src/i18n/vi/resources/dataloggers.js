@@ -29,7 +29,7 @@ export default {
     inputOptionIds: 'Giao tiếp đầu vào',
     outputOptionIds: 'Giao tiếp đầu ra',
     materialStatus: 'Tình trạng',
-    waterSourceId: 'Nguồn nước',
+    bworksSourceId: 'Nguồn nước',
     ...commonFields,
   },
   list: 'Danh sách',

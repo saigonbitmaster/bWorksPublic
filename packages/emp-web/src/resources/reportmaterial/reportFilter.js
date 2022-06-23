@@ -26,16 +26,16 @@ const styles = theme => {
 };
 
 class ReportFilter extends Component {
-  getAllWaterGroups = () => {
-    this.props.dataProvider(CUSTOM, 'watersourcegroups', { filter: { fields: { id: true, name: true } } }).then(res => {
-      this.setState({ allWaterSourceGroups: [...res.data, ...this.selectAll] });
+  getAllbworksGroups = () => {
+    this.props.dataProvider(CUSTOM, 'bworkssourcegroups', { filter: { fields: { id: true, name: true } } }).then(res => {
+      this.setState({ allbworksSourceGroups: [...res.data, ...this.selectAll] });
     });
   };
-  getAllWaterSources = () => {
+  getAllbworksSources = () => {
     this.props
-      .dataProvider(CUSTOM, 'watersources', { filter: { fields: { id: true, name: true, waterSourceGroupId: true } } })
+      .dataProvider(CUSTOM, 'bworkssources', { filter: { fields: { id: true, name: true, bworksSourceGroupId: true } } })
       .then(res => {
-        this.setState({ allWaterSources: [...res.data, ...this.selectAll] });
+        this.setState({ allbworksSources: [...res.data, ...this.selectAll] });
       });
   };
 
@@ -45,13 +45,13 @@ class ReportFilter extends Component {
     this.filterConditions = config.filterConditions;
     this.conditionTypes = config.filterConditions.map(({ conditions, ...rest }) => rest);
     this.state = {
-      allWaterSourceGroups: [],
-      allWaterSources: [],
-      waterSourceChoices: [],
+      allbworksSourceGroups: [],
+      allbworksSources: [],
+      bworksSourceChoices: [],
       conditionChoices: [],
-      selectedWaterSources: [],
-      selectedSourceWaterGroup: null,
-      selectedWaterSource: null,
+      selectedbworksSources: [],
+      selectedSourcebworksGroup: null,
+      selectedbworksSource: null,
       selectedConditionType: null,
       selectedConditions: [],
       filter: {},
@@ -59,30 +59,30 @@ class ReportFilter extends Component {
   }
 
   UNSAFE_componentWillMount() {
-    this.getAllWaterGroups();
-    this.getAllWaterSources();
+    this.getAllbworksGroups();
+    this.getAllbworksSources();
   }
 
   onChangeSourceGroup = (e, val) => {
-    this.setState({ selectedSourceWaterGroup: val });
+    this.setState({ selectedSourcebworksGroup: val });
     if (val === this.selectAll[0].id) {
-      this.setState({ waterSourceChoices: this.state.allWaterSources });
+      this.setState({ bworksSourceChoices: this.state.allbworksSources });
     } else {
       this.setState({
-        waterSourceChoices: this.state.allWaterSources.filter(
-          item => item.waterSourceGroupId === val || item.id === 'all',
+        bworksSourceChoices: this.state.allbworksSources.filter(
+          item => item.bworksSourceGroupId === val || item.id === 'all',
         ),
       });
     }
   };
 
-  onChangeWaterSource = (e, val) => {
+  onChangebworksSource = (e, val) => {
     if (val !== this.selectAll[0].id) {
-      let selectedWaterSources = [];
-      selectedWaterSources.push({ id: val });
-      this.setState({ selectedWaterSources: selectedWaterSources });
+      let selectedbworksSources = [];
+      selectedbworksSources.push({ id: val });
+      this.setState({ selectedbworksSources: selectedbworksSources });
     } else {
-      this.setState({ selectedWaterSources: this.state.waterSourceChoices });
+      this.setState({ selectedbworksSources: this.state.bworksSourceChoices });
     }
   };
 
@@ -97,7 +97,7 @@ class ReportFilter extends Component {
 
   submitFilter = () => {
     let filter = {};
-    filter.selectedWaterSources = this.state.selectedWaterSources.filter(item => item.id !== this.selectAll[0].id);
+    filter.selectedbworksSources = this.state.selectedbworksSources.filter(item => item.id !== this.selectAll[0].id);
     filter.conditionType = this.state.selectedConditionType;
     filter.selectConditions = this.state.selectedConditions;
     this.props.queryReport(filter);
@@ -113,17 +113,17 @@ class ReportFilter extends Component {
             <SelectInput
               source="sourceGroup"
               label={translate('resources.reportmaterials.fields.selectGroup')}
-              choices={this.state.allWaterSourceGroups}
+              choices={this.state.allbworksSourceGroups}
               style={{ marginLeft: '5px' }}
               onChange={this.onChangeSourceGroup}
             />
             <SelectInput
-              source="waterSource"
+              source="bworksSource"
               label={translate('resources.reportmaterials.fields.selectSource')}
-              choices={this.state.waterSourceChoices}
+              choices={this.state.bworksSourceChoices}
               style={{ marginLeft: '5px' }}
-              onChange={this.onChangeWaterSource}
-              disabled={!this.state.selectedSourceWaterGroup}
+              onChange={this.onChangebworksSource}
+              disabled={!this.state.selectedSourcebworksGroup}
             />
           </Grid>
           <Grid middle container>

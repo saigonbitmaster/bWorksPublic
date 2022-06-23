@@ -7,7 +7,7 @@ const SMS_ACCESS_TOKEN = 'dsOL6J0RkL7A9dKpw6Ft0E31GUolVcPa';
 //send sms
 function sendSms(phoneList, message) {
   //let phones = ["0909618609"];
-  //let content = "Water source notification";
+  //let content = "bworks source notification";
   let phones = phoneList;
   let content = message.content;
   let type = 3;
@@ -69,14 +69,14 @@ function sendEmail(emailList, message) {
       service: 'gmail',
       host: 'smtp.gmail.com',
       auth: {
-        user: 'watersupport@Bworks.online',
+        user: 'bworkssupport@Bworks.online',
         pass: 'Bworks@2017',
       },
     }),
   );
 
   let mailOptions = {
-    from: 'watersupport@Bworks.online',
+    from: 'bworkssupport@Bworks.online',
     to: emailList,
     subject: message.subject,
     text: message.content,
@@ -91,10 +91,10 @@ function sendEmail(emailList, message) {
   });
 }
 
-module.exports = function(WaterSource) {
+module.exports = function(bworksSource) {
   //main function
-  WaterSource.smsNotification = async function(mode) {
-    let notificationContacts = await WaterSource.app.models.SrcConfig.find({
+  bworksSource.smsNotification = async function(mode) {
+    let notificationContacts = await bworksSource.app.models.SrcConfig.find({
       where: { id: { inq: ['Sms', 'Email'] } },
     });
     if (!notificationContacts || notificationContacts.length < 1) {
@@ -103,8 +103,8 @@ module.exports = function(WaterSource) {
     let phoneList = notificationContacts.filter(item => item.id == 'Sms');
     let emailList = notificationContacts.filter(item => item.id == 'Email');
     let message = {
-      subject: 'Water source notification',
-      content: 'There is some alert on water source system',
+      subject: 'bworks source notification',
+      content: 'There is some alert on bworks source system',
     };
     switch (mode) {
       case 'sms': {
@@ -134,7 +134,7 @@ module.exports = function(WaterSource) {
     }
   };
 
-  WaterSource.remoteMethod('smsNotification', {
+  bworksSource.remoteMethod('smsNotification', {
     accepts: [{ arg: 'mode', type: 'string', default: 'email' }], //mode = 'email' or 'sms'
     http: { verb: 'get' },
     returns: { arg: 'data', type: 'object', root: true },

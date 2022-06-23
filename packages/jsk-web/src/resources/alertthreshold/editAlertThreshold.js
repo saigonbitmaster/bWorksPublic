@@ -198,7 +198,7 @@ class EditAlertThreshold extends Component {
               <TextInput source="name" validate={[required()]} />
             </Grid>
             <Grid middle item xs={12} sm={6}>
-              <ReferenceInput source="waterSourceId" reference="watersources" validate={[required()]}>
+              <ReferenceInput source="bworksSourceId" reference="bworkssources" validate={[required()]}>
                 <SelectInput source="name" />
               </ReferenceInput>
             </Grid>
@@ -216,10 +216,10 @@ class EditAlertThreshold extends Component {
                 {({ formData, ...rest }) =>
                   formData.alertParam === '1' && (
                     <ReferenceInput
-                      label="resources.alertthresholds.fields.waterParameterId"
+                      label="resources.alertthresholds.fields.bworksParameterId"
                       {...rest}
-                      source="waterParameterId"
-                      reference="waterparameters"
+                      source="bworksParameterId"
+                      reference="bworksparameters"
                       validate={[required()]}
                     >
                       <SelectInput source="name" />

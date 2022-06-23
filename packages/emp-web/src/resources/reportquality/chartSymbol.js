@@ -9,7 +9,7 @@ import { Grid } from '@material-ui/core';
 import config from '../../Config';
 import LoggerChartHour from './LoggerChartHour.js';
 import LoggerChartDay from './LoggerChartDay.js';
-import FilterReportWaterSource from '../../components/common/filter/FilterReportWaterSource';
+import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
 const styles = theme => {
   return {
     paper: {
@@ -32,7 +32,7 @@ class ChartSymbol extends Component {
         .toDate(),
     },
     sourceGroup: 'all',
-    waterSource: 'all',
+    bworksSource: 'all',
   };
   selectAll = config.selectAll;
   state = {
@@ -42,19 +42,19 @@ class ChartSymbol extends Component {
   };
 
   queryReport = filter => {
-    // console.log('get data', filter, this.state.selectedWaterParam);
+    // console.log('get data', filter, this.state.selectedbworksParam);
     if (!filter) return;
     let cloneFilter = Object.assign({}, filter);
-    cloneFilter.waterParameterId = filter.waterParam;
+    cloneFilter.bworksParameterId = filter.bworksParam;
     delete cloneFilter.sourceGroup;
-    delete cloneFilter.waterParam;
+    delete cloneFilter.bworksParam;
     this.setState({ selectedParamSymbol: cloneFilter.selectedParamSymbol });
     return this.statistic(cloneFilter);
   };
 
   statistic = async filter => {
     const { dataProvider } = this.props;
-    let res = await dataProvider(CUSTOM, 'watersources', {
+    let res = await dataProvider(CUSTOM, 'bworkssources', {
       method: 'get',
       subUrl: 'getDataChartReportQuality',
       query: { filter: JSON.stringify(filter) },
@@ -81,12 +81,12 @@ class ChartSymbol extends Component {
       <CustomPage title={title}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12}>
-            <FilterReportWaterSource
+            <FilterReportbworksSource
               formName={'wsrc-filter-report-quality-chart'}
               queryReport={this.queryReport}
               typeTimes={['hour', 'day']}
               defaultFilter={this.defaultFilter}
-              showWaterParameter={true}
+              showbworksParameter={true}
               flgMaterial={false}
               flgDetail={false}
               flgChart={true}

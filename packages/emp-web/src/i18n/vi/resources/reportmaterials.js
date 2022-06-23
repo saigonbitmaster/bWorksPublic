@@ -31,7 +31,7 @@ export default {
     selectCondition: 'Điều kiện lọc',
     selectGroup: 'Chọn nhóm nguồn',
     selectSource: 'Chọn nguồn nước',
-    waterSource: 'Nguồn nước',
+    bworksSource: 'Nguồn nước',
     materialStatus: 'Tình trạng',
     sensor: 'Cảm biến',
     meter: 'Đồng hồ',

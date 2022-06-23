@@ -1,6 +1,6 @@
 import commonFields from '../commomFields';
 export default {
-  name: 'Water parameter',
+  name: 'bworks parameter',
   fields: {
     name: 'Name',
     prefix: 'Prefix',
@@ -14,7 +14,7 @@ export default {
     symbol: 'Symbol',
     measureUnit: 'Measure unit',
     normalMethod: 'Normal measure method',
-    waterStage: 'Water stage',
+    bworksStage: 'bworks stage',
     description: 'description',
     ...commonFields,
   },

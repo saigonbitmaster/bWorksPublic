@@ -3,25 +3,25 @@ import { get, set } from 'lodash';
 
 const initData = {
   layer: {
-    watersourcegroups: {
-      label: 'resources.watersourcegroups.name',
-      resource: 'watersourcegroups',
+    bworkssourcegroups: {
+      label: 'resources.bworkssourcegroups.name',
+      resource: 'bworkssourcegroups',
       checked: true,
       // sub: {
-      //   watersources: {
-      //     label: 'resources.watersources.name',
-      //     resource: 'watersources',
+      //   bworkssources: {
+      //     label: 'resources.bworkssources.name',
+      //     resource: 'bworkssources',
       //     checked: false,
       //   },
       // },
     },
-    watersources: {
-      label: 'resources.watersources.name',
-      resource: 'watersources',
+    bworkssources: {
+      label: 'resources.bworkssources.name',
+      resource: 'bworkssources',
       checked: false,
     },
   },
-  activeGroup: 'watersourcegroups.watersources',
+  activeGroup: 'bworkssourcegroups.bworkssources',
 };
 // eslint-disable-next-line no-unused-vars
 export default (previousState = initData, { type, payload }) => {

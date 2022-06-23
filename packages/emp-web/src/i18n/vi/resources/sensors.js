@@ -24,7 +24,7 @@ export default {
     certifications: 'Chứng chỉ',
     description: 'Mô tả',
     dataLoggerId: 'Dùng thiết bị ghi/phát',
-    waterSourceId: 'Dùng cho nguồn nước',
+    bworksSourceId: 'Dùng cho nguồn nước',
     sensorProbeList: 'Danh sách đầu đo',
     inputOptionIds: 'Giao tiếp đầu vào (Đầu đo)',
     outputOptionIds: 'Giao tiếp đầu ra (Data logger)',

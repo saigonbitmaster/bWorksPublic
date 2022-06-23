@@ -14,7 +14,7 @@ export default {
     symbol: 'Ký hiệu',
     measureUnit: 'Đơn vị đo',
     normalMethod: 'Phương pháp đo',
-    waterStage: 'Đo cho loại nước',
+    bworksStage: 'Đo cho loại nước',
     description: 'Mô tả',
     ...commonFields,
   },

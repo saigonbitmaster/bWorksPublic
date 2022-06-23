@@ -3,7 +3,7 @@ export default {
   name: 'Nhóm nguồn',
   fields: {
     name: 'Tên nhóm nguồn',
-    typeOfWaterSourceGroup: 'Loại nhóm nguồn',
+    typeOfbworksSourceGroup: 'Loại nhóm nguồn',
     prefix: 'Tiền tố',
     fullName: 'Tên đầy đủ',
     code: 'Mã',
@@ -22,7 +22,7 @@ export default {
     reservedGroup: 'Nhóm dự trữ',
     wardId: 'Phường / Xã',
     quarterId: 'Tổ / Thôn / Ấp',
-    waterSource: 'Nguồn nước thô',
+    bworksSource: 'Nguồn nước thô',
     type: 'Loại',
     ...commonFields,
   },

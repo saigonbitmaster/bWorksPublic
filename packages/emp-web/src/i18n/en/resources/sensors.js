@@ -25,7 +25,7 @@ export default {
     certifications: 'Certifications',
 
     dataLoggerId: 'DataLogger',
-    waterSourceId: 'Water source',
+    bworksSourceId: 'bworks source',
     sensorProbeList: 'Sensor probe list',
     inputOptionIds: 'Input options (probe)',
     outputOptionIds: 'Output options (DataLogger)',

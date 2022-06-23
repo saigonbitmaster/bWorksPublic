@@ -4,9 +4,9 @@ import { Grid, withTheme } from '@material-ui/core';
 import { withDataProvider } from 'ra-loopback3';
 import { compose } from 'recompose';
 import TotalSourceCapacity from './totalSourceCapacity';
-import WaterSourceCount from './waterSourceCount';
+import bworksSourceCount from './bworksSourceCount';
 import FactoryStatisticWidget from './FactoryStatisticWidget';
-import WaterSourceStatistic from './waterSourceStatistic';
+import bworksSourceStatistic from './bworksSourceStatistic';
 
 class TopStatistic extends Component {
   componentDidMount() {}
@@ -18,10 +18,10 @@ class TopStatistic extends Component {
           <TotalSourceCapacity />
         </Grid>
         <Grid item sm={6} md={3} xs={12}>
-          <WaterSourceCount />
+          <bworksSourceCount />
         </Grid>
         <Grid item sm={6} md={3} xs={12}>
-          <WaterSourceStatistic />
+          <bworksSourceStatistic />
         </Grid>
         <Grid item sm={6} md={3} xs={12}>
           <FactoryStatisticWidget />

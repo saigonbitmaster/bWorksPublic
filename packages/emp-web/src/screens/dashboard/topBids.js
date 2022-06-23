@@ -16,7 +16,7 @@ import { translate } from 'ra-loopback3';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
-import { WaterSourceIcon, LogTimeIcon, FlowLoggerIcon } from '../../styles/Icons';
+import { bworksSourceIcon, LogTimeIcon, FlowLoggerIcon } from '../../styles/Icons';
 import config from '../../Config';
 
 class StatusItemBaseFlowLogger extends Component {
@@ -44,13 +44,13 @@ class StatusItemBaseFlowLogger extends Component {
     const { currentStatus, classes, theme, getPadding, translate } = this.props;
     return (
       <List component="div" disablePadding>
-        {currentStatus.map((waterSource, index) => (
-          <Fragment key={waterSource.waterSourceName}>
-            <ListItem button style={{ paddingLeft: getPadding({ level: 1 }) }} key={waterSource.waterSourceName}>
+        {currentStatus.map((bworksSource, index) => (
+          <Fragment key={bworksSource.bworksSourceName}>
+            <ListItem button style={{ paddingLeft: getPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
               <ListItemIcon>
-                <WaterSourceIcon />
+                <bworksSourceIcon />
               </ListItemIcon>
-              <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{waterSource.waterSourceName}</b>} />
+              <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
               <ListItemSecondaryAction>
                 <Tooltip title={translate('generic.totalDataLogger')}>
                   <Chip
@@ -60,14 +60,14 @@ class StatusItemBaseFlowLogger extends Component {
                       </Avatar>
                     }
                     className={classes.chip}
-                    label={Array.isArray(waterSource.dataLoggers) ? waterSource.dataLoggers.length : ''}
+                    label={Array.isArray(bworksSource.dataLoggers) ? bworksSource.dataLoggers.length : ''}
                   />
                 </Tooltip>
               </ListItemSecondaryAction>
             </ListItem>
-            {Array.isArray(waterSource.dataLoggers) && waterSource.dataLoggers.length > 0 && (
+            {Array.isArray(bworksSource.dataLoggers) && bworksSource.dataLoggers.length > 0 && (
               <List component="div" disablePadding>
-                {waterSource.dataLoggers.map(dataLogger => (
+                {bworksSource.dataLoggers.map(dataLogger => (
                   <Fragment key={dataLogger._id}>
                     <Divider style={{ marginLeft: getPadding({ level: 2 }) + theme.spacing(1) }} />
                     <ListItem

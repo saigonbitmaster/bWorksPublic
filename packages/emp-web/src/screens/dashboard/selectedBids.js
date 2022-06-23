@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import { translate } from 'ra-loopback3';
 import config from '../../Config';
-import { NormalWaterSourceIcon, AlertWaterSourceIcon, LogTimeIcon, WaterSourceIcon } from '../../styles/Icons';
+import { NormalbworksSourceIcon, AlertbworksSourceIcon, LogTimeIcon, bworksSourceIcon } from '../../styles/Icons';
 
 const translateColor = alert => {
   switch (alert) {
@@ -50,7 +50,7 @@ let currentStatus1 = [
         <Fragment key={bid.bidName}>
           <ListItem button style={{ paddingLeft: getPadding({ level: 1 }) }} key={bid.bidName}>
             <ListItemIcon>
-              <WaterSourceIcon />
+              <bworksSourceIcon />
             </ListItemIcon>
             <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bid.bidName}</b>} />
             <ListItemSecondaryAction>
@@ -59,11 +59,11 @@ let currentStatus1 = [
                   avatar={
                     bid.totalAlert == 0 ? (
                       <Avatar className={classes.chipIcon}>
-                        <NormalWaterSourceIcon style={{ color: translateColor(3) }} />
+                        <NormalbworksSourceIcon style={{ color: translateColor(3) }} />
                       </Avatar>
                     ) : (
                       <Avatar className={classes.chipIcon}>
-                        <AlertWaterSourceIcon style={{ color: translateColor(2) }} />
+                        <AlertbworksSourceIcon style={{ color: translateColor(2) }} />
                       </Avatar>
                     )
                   }

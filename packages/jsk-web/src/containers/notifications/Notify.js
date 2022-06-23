@@ -17,7 +17,7 @@ class Notify extends Component {
 
   loadNotify = () => {
     const { dataProvider } = this.props;
-    dataProvider(CUSTOM, 'WaterSources', {
+    dataProvider(CUSTOM, 'bworksSources', {
       subUrl: 'dashboard',
       method: 'get',
       query: { mode: 'notify' },

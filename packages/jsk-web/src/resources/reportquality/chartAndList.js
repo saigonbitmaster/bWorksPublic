@@ -40,7 +40,7 @@ const styles = theme => {
 
 class ChartAndList extends Component {
   state = {
-    sumTotalWaterSource: 0,
+    sumTotalbworksSource: 0,
     numberAlertCriticalHigh: 0,
     numberAlertHigh: 0,
     numberAlertLow: 0,
@@ -64,28 +64,28 @@ class ChartAndList extends Component {
   //   const { filter: currentFilter = {}, dataProvider } = this.props;
   //   if (
   //     !isEqual(prevFilter.selectedParamSymbol, currentFilter.selectedParamSymbol) ||
-  //     !isEqual(prevFilter.selectedWaterParam, currentFilter.selectedWaterParam) ||
-  //     !isEqual(prevFilter.selectedWaterSources, currentFilter.selectedWaterSources) ||
+  //     !isEqual(prevFilter.selectedbworksParam, currentFilter.selectedbworksParam) ||
+  //     !isEqual(prevFilter.selectedbworksSources, currentFilter.selectedbworksSources) ||
   //     !isEqual(prevFilter.typeTime, currentFilter.typeTime) ||
   //     !isEqual(prevFilter.valueTimeFrom, currentFilter.valueTimeFrom) ||
   //     !isEqual(prevFilter.valueTimeTo, currentFilter.valueTimeTo)
   //   ) {
-  //     dataProvider(CUSTOM, 'WaterSources', {
+  //     dataProvider(CUSTOM, 'bworksSources', {
   //       method: 'GET',
   //       subUrl: 'reportQuality',
   //       fullUrl: true,
   //       filter: { where: currentFilter, order: ['logTime ASC'], skip: 0, limit: 100000 },
   //     }).then(({ data }) => {
-  //       const rawSourceList = data.map(item => item.waterSourceName);
+  //       const rawSourceList = data.map(item => item.bworksSourceName);
   //       const sourceList = Array.from(new Set(rawSourceList));
   //       const numberAlertCriticalHigh = data.filter(item => item.alert == '1').length;
   //       const numberAlertHigh = data.filter(item => item.alert == '2').length;
   //       const numberAlertLow = data.filter(item => item.alert == '3').length;
   //       const numberAlertCriticalLow = data.filter(item => item.alert == '4').length;
-  //       const sumTotalWaterSource = sourceList.length || 0;
+  //       const sumTotalbworksSource = sourceList.length || 0;
   //       const chartData = this.processDataForChart(sourceList, data, currentFilter);
   //       this.setState({
-  //         sumTotalWaterSource: sumTotalWaterSource,
+  //         sumTotalbworksSource: sumTotalbworksSource,
   //         numberAlertCriticalHigh: numberAlertCriticalHigh,
   //         numberAlertHigh: numberAlertHigh,
   //         numberAlertLow: numberAlertLow,
@@ -203,7 +203,7 @@ class ChartAndList extends Component {
   // conduct data and print pdf
   handlePrint = filter => {
     const {
-      sumTotalWaterSource,
+      sumTotalbworksSource,
       numberAlertCriticalHigh,
       numberAlertHigh,
       numberAlertLow,
@@ -214,8 +214,8 @@ class ChartAndList extends Component {
     let templateData = {};
     templateData.reportName = translate('generic.report.titleReportQuality');
     templateData.reportFilter = `${sourceList} || ${filter.selectedParamSymbol} ||${filter.valueTimeFrom}-${filter.valueTimeTo}`;
-    templateData.sumData01 = translate('resources.reportqualities.sumWaterSource', {
-      val: format.number(sumTotalWaterSource, 2),
+    templateData.sumData01 = translate('resources.reportqualities.sumbworksSource', {
+      val: format.number(sumTotalbworksSource, 2),
     });
     templateData.sumData02 = translate('resources.reportqualities.numberAlertCriticalHigh', {
       val: format.number(numberAlertCriticalHigh, 2),
@@ -230,8 +230,8 @@ class ChartAndList extends Component {
       val: format.number(numberAlertCriticalLow, 2),
     });
     templateData.tableHeader = {
-      column01: translate('resources.reportqualities.fields.waterSourceName'),
-      column02: translate('resources.reportqualities.fields.waterParameterName'),
+      column01: translate('resources.reportqualities.fields.bworksSourceName'),
+      column02: translate('resources.reportqualities.fields.bworksParameterName'),
       column03: translate('resources.reportqualities.fields.logTime'),
       column04: translate('resources.reportqualities.fields.alert'),
     };
@@ -256,7 +256,7 @@ class ChartAndList extends Component {
           templateModel: 'SourceTemplate',
           fileModel: 'SourceFile',
           filter: { where: filter, order: ['logtime DESC '], limit: 1000 },
-          model: 'WaterSource',
+          model: 'bworksSource',
           remoteMethod: 'reportQuality',
         },
       })
@@ -271,7 +271,7 @@ class ChartAndList extends Component {
     // let a = 'hh';
     const { classes, translate, filter, refController } = this.props;
     const {
-      sumTotalWaterSource,
+      sumTotalbworksSource,
       numberAlertCriticalHigh,
       numberAlertHigh,
       numberAlertLow,
@@ -290,7 +290,7 @@ class ChartAndList extends Component {
     let subTitle = [
       {
         id: 1,
-        content: translate('resources.reportqualities.sumWaterSource', { val: format.number(sumTotalWaterSource, 2) }),
+        content: translate('resources.reportqualities.sumbworksSource', { val: format.number(sumTotalbworksSource, 2) }),
       },
       {
         id: 2,
@@ -380,7 +380,7 @@ class ChartAndList extends Component {
               refController={refController}
               className="subheader"
               resource="reportqualities"
-              fixUrl="WaterSources/reportQuality"
+              fixUrl="bworksSources/reportQuality"
               title={translate('generic.report.titleReportQuality')}
               bulkActions={false}
               subTitle={subTitle}
@@ -389,11 +389,11 @@ class ChartAndList extends Component {
               customFilter={{ where: filter, sort: { field: 'logTime', order: 'DESC' } }}
               exportExcelPermission={{ name: 'reportQuality', action: 'export' }}
               disableExportExcel={Object.keys(filter).length === 0}
-              rootModel={'ReportWaterSourceQuality'}
+              rootModel={'ReportbworksSourceQuality'}
               sourcesAndTranslations={{
                 rootFields: {
-                  waterSourceName: { header: translate('resources.reportqualities.fields.waterSourceName') },
-                  waterParameterName: { header: translate('resources.reportqualities.fields.waterParameterName') },
+                  bworksSourceName: { header: translate('resources.reportqualities.fields.bworksSourceName') },
+                  bworksParameterName: { header: translate('resources.reportqualities.fields.bworksParameterName') },
                   logTime: { header: translate('resources.reportqualities.fields.logTime') },
                   [selectedParamSymbol]: { header: selectedParamSymbol },
                   alert: {
@@ -407,8 +407,8 @@ class ChartAndList extends Component {
               }}
             >
               <Datagrid>
-                <TextField source="waterSourceName" />
-                <TextField source="waterParameterName" />
+                <TextField source="bworksSourceName" />
+                <TextField source="bworksParameterName" />
                 {/* <DateField source="logTime" showTime={this.state.filter.typeTime == 'hour'}  /> */}
                 <DateField source="logTime" showTime />
                 <NumberField source={selectedParamSymbol} label={translate(`generic.symbol.${selectedParamSymbol}`)} />

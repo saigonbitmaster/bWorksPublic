@@ -21,7 +21,7 @@ export default {
     environmentalRating: 'Environmental rating (IP)',
     description: 'Description',
     dataLoggerId: 'DataLogger',
-    waterSourceId: 'Water source',
+    bworksSourceId: 'bworks source',
     outputOptionsIds: 'Output options',
     materialStatus: 'Material status',
     ...commonFields,

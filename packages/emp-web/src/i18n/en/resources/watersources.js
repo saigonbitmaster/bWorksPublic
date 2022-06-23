@@ -1,6 +1,6 @@
 import commonFields from '../commomFields';
 export default {
-  name: 'Water source',
+  name: 'bworks source',
   fields: {
     name: 'Name',
     prefix: 'Prefix',
@@ -12,7 +12,7 @@ export default {
     districtId: 'District',
     position: 'Position',
 
-    typeOfWaterSource: 'Type of water source',
+    typeOfbworksSource: 'Type of bworks source',
     typeOfSource: 'Type of source group',
     activeGroup: 'Active group',
     volumeCapacity: 'Volume capacity (m3)',
@@ -24,14 +24,14 @@ export default {
     lastMaintainedDate: 'Last maintain date',
     isBackupSource: 'Is backup source',
     description: 'Description',
-    waterSourceGroupId: 'Water source group',
+    bworksSourceGroupId: 'bworks source group',
     backupGroup: 'Backup group',
     reservedGroup: 'Reserved group',
     wardId: 'Ward',
     quarterId: 'Quarter',
-    waterSource: 'Water source',
-    surfaceWater: 'Surface water',
-    groundWater: 'Ground water',
+    bworksSource: 'bworks source',
+    surfacebworks: 'Surface bworks',
+    groundbworks: 'Ground bworks',
     dimensions: 'Dimensions: length, width, depth (m)',
     sourceStatus: 'Source status',
     normal: 'Normal',

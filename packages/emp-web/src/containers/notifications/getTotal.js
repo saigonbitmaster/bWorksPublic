@@ -2,7 +2,7 @@ import { CUSTOM } from 'ra-loopback3';
 
 export default async dataProvider => {
   let total = null;
-  await dataProvider(CUSTOM, 'WaterSources', {
+  await dataProvider(CUSTOM, 'bworksSources', {
     subUrl: 'dashboard',
     method: 'get',
     query: { mode: 'notify' },

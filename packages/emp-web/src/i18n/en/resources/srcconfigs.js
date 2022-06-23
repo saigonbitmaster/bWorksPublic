@@ -1,7 +1,7 @@
 import commonFields from '../commomFields';
 // import unit from '../unit';
 export default {
-  name: 'Water source system configurations |||| Water source system configurations',
+  name: 'bworks source system configurations |||| bworks source system configurations',
   position: 'Position',
   fields: {
     id: 'Name',
@@ -47,7 +47,7 @@ export default {
   pressure: {
     high: 'High (%)',
     low: 'Low (%)',
-    loss: 'Water loss (%)',
+    loss: 'bworks loss (%)',
   },
   flow: {
     high: 'High (%)',

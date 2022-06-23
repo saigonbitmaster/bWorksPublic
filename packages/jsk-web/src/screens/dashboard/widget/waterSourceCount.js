@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
-import { WaterSourceIcon } from '../../../styles/Icons';
+import { bworksSourceIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class WaterSourceCount extends Component {
+class bworksSourceCount extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -34,7 +34,7 @@ class WaterSourceCount extends Component {
 
   dashboardData = () => {
     this.props
-      .dataProvider(CUSTOM, 'WaterSources', {
+      .dataProvider(CUSTOM, 'bworksSources', {
         subUrl: 'dashboard',
         method: 'get',
         query: { mode: 'widget' },
@@ -56,13 +56,13 @@ class WaterSourceCount extends Component {
  
   }
   render() {
-    return <StatisticWidget icon={<WaterSourceIcon />} {...this.state} />;
+    return <StatisticWidget icon={<bworksSourceIcon />} {...this.state} />;
   }
 }
 
-WaterSourceCount.propTypes = {
+bworksSourceCount.propTypes = {
   translate: PropTypes.func,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withDataProvider);
-export default enhance(WaterSourceCount);
+export default enhance(bworksSourceCount);

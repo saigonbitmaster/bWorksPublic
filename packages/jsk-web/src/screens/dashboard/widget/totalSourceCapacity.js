@@ -23,7 +23,7 @@ class TotalSourceCapacity extends Component {
 
   dashboardData = () => {
     this.props
-      .dataProvider(CUSTOM, 'WaterSources', {
+      .dataProvider(CUSTOM, 'bworksSources', {
         subUrl: 'dashboard',
         method: 'get',
         query: { mode: 'widget' },

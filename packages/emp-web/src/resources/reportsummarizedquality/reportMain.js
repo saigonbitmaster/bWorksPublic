@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 // import ReportFilter from './reportFilter';
 import ChartAndList from './chartAndList';
-import FilterReportWaterSource from '../../components/common/filter/FilterReportWaterSource';
+import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
 import moment from 'moment-timezone';
 const styles = theme => {
   return {
@@ -30,7 +30,7 @@ class ReportMain extends Component {
         .toDate(),
     },
     sourceGroup: 'all',
-    waterSource: 'all',
+    bworksSource: 'all',
   };
   state = {
     reportFilter: {},
@@ -53,7 +53,7 @@ class ReportMain extends Component {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12}>
             {/* <ReportFilter queryReport={this.queryReport} handlePrint={this.handlePrint} /> */}
-            <FilterReportWaterSource
+            <FilterReportbworksSource
               formName={'wsrc-filter-statistic-quality-detail'}
               defaultFilter={this.defaultFilter}
               queryReport={this.queryReport}
@@ -63,7 +63,7 @@ class ReportMain extends Component {
               flgMaterial={false}
               flgDetail={true}
               flgChart={false}
-              showWaterParameter={true}
+              showbworksParameter={true}
             />
           </Grid>
           <Grid item xs={12} sm={12}>

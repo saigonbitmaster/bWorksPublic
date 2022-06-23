@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
-import { WaterSourceIcon } from '../../../styles/Icons';
+import { bworksSourceIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
 class BidJobs extends Component {
@@ -56,7 +56,7 @@ class BidJobs extends Component {
  
   }
   render() {
-    return <StatisticWidget icon={<WaterSourceIcon />} {...this.state} />;
+    return <StatisticWidget icon={<bworksSourceIcon />} {...this.state} />;
   }
 }
 

@@ -31,7 +31,7 @@ export default {
     selectCondition: 'Select filter condition',
     selectGroup: 'Select group',
     selectSource: 'Select source',
-    waterSource: 'Water source',
+    bworksSource: 'bworks source',
     materialStatus: 'Status',
     sensor: 'Sensor',
     meter: 'Meter',

@@ -28,7 +28,7 @@ class FlowLoggerStatisticWidget extends Component {
   /* loadStatus = () => {
         const { dataProvider } = this.props;
         const { baseOnFlowLogger } = this.state;
-        dataProvider(CUSTOM, 'WaterSource', {
+        dataProvider(CUSTOM, 'bworksSource', {
             subUrl: 'dashboard',
             method: 'get',
             query: { mode: baseOnFlowLogger ? 'FlowLogger' : 'Dma' },

@@ -37,7 +37,7 @@ const styles = theme => {
 
 class ChartAndList extends Component {
   state = {
-    sumTotalWaterSource: 0,
+    sumTotalbworksSource: 0,
     minValue: 0,
     maxValue: 0,
     avgValue: 0,
@@ -60,25 +60,25 @@ class ChartAndList extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     let { report, filter } = nextProps;
     if (report && report.list && report.data && report.list.ids.length > 0) {
-      let sumTotalWaterSource = 0,
+      let sumTotalbworksSource = 0,
         minValue = 0,
         maxValue = 0,
         avgValue = 0;
       let avgFunc = array => array.reduce((a, b) => a + b, 0) / array.length;
       let ids = report.list.ids;
       let data = ids.map(id => report.data[id]);
-      let rawSourceList = data.map(item => item.waterSourceName);
+      let rawSourceList = data.map(item => item.bworksSourceName);
       let sourceList = Array.from(new Set(rawSourceList));
       let minList = data.map(item => item.minValue);
       let avgList = data.map(item => item.avgValue);
       let maxList = data.map(item => item.maxValue);
-      sumTotalWaterSource = sourceList.length;
+      sumTotalbworksSource = sourceList.length;
       minValue = Math.min(...minList);
       maxValue = Math.max(...maxList);
       avgValue = avgFunc(avgList);
 
       this.setState({
-        sumTotalWaterSource: sumTotalWaterSource,
+        sumTotalbworksSource: sumTotalbworksSource,
         minValue: minValue,
         maxValue: maxValue,
         avgValue: avgValue,
@@ -90,13 +90,13 @@ class ChartAndList extends Component {
   }
   // conduct data and print pdf
   handlePrint = () => {
-    const { sumTotalWaterSource, minValue, avgValue, maxValue, data, sourceList, filter } = this.state;
+    const { sumTotalbworksSource, minValue, avgValue, maxValue, data, sourceList, filter } = this.state;
     const { translate } = this.props;
     let templateData = {};
     templateData.reportName = translate('generic.report.titleReportSummarizedQuality');
     templateData.reportFilter = `${sourceList} || ${filter.selectedParamSymbol} ||${filter.valueTimeFrom}-${filter.valueTimeTo}`;
-    templateData.sumData01 = translate('resources.reportsummarizedqualities.sumWaterSource', {
-      val: format.number(sumTotalWaterSource, 2),
+    templateData.sumData01 = translate('resources.reportsummarizedqualities.sumbworksSource', {
+      val: format.number(sumTotalbworksSource, 2),
     });
     templateData.sumData02 = translate('resources.reportsummarizedqualities.minValue', {
       val: format.number(minValue, 2),
@@ -108,8 +108,8 @@ class ChartAndList extends Component {
       val: format.number(maxValue, 2),
     });
     templateData.tableHeader = {
-      column01: translate('resources.reportsummarizedqualities.fields.waterSourceName'),
-      column02: translate('resources.reportsummarizedqualities.fields.waterParameterName'),
+      column01: translate('resources.reportsummarizedqualities.fields.bworksSourceName'),
+      column02: translate('resources.reportsummarizedqualities.fields.bworksParameterName'),
       column03: translate('resources.reportsummarizedqualities.fields.logTime'),
       column04: translate('resources.reportsummarizedqualities.fields.minValue'),
       column05: translate('resources.reportsummarizedqualities.fields.avgValue'),
@@ -163,7 +163,7 @@ class ChartAndList extends Component {
       scatterArray.push(
         <Scatter
           name={sourceList[i]}
-          data={dataTemp.filter(item => item.waterSourceName == sourceList[i])}
+          data={dataTemp.filter(item => item.bworksSourceName == sourceList[i])}
           fill={config.color.basicChart[i]}
           line
           shape="cross"
@@ -178,13 +178,13 @@ class ChartAndList extends Component {
 
   render() {
     const { classes, translate, refController } = this.props;
-    const { sumTotalWaterSource, minValue, avgValue, maxValue } = this.state;
+    const { sumTotalbworksSource, minValue, avgValue, maxValue } = this.state;
     // let optionFormat;
     let subTitle = [
       {
         id: 1,
-        content: translate('resources.reportsummarizedqualities.sumWaterSource', {
-          val: format.number(sumTotalWaterSource, 2),
+        content: translate('resources.reportsummarizedqualities.sumbworksSource', {
+          val: format.number(sumTotalbworksSource, 2),
         }),
       },
       {
@@ -247,7 +247,7 @@ class ChartAndList extends Component {
               refController={refController}
               className="subheader"
               resource="reportsummarizedqualities"
-              fixUrl="WaterSources/reportSummarizedQuality"
+              fixUrl="bworksSources/reportSummarizedQuality"
               title={translate('generic.report.titleReportSummarizedQuality')}
               bulkActions={false}
               subTitle={subTitle}
@@ -255,8 +255,8 @@ class ChartAndList extends Component {
               perPage={25}
             >
               <Datagrid>
-                <TextField source="waterSourceName" />
-                <TextField source="waterParameterName" />
+                <TextField source="bworksSourceName" />
+                <TextField source="bworksParameterName" />
                 <DateField source="logTime" showTime={this.state.filter.typeTime == 'hour'} />
                 <NumberField source="minValue" />
                 <NumberField source="avgValue" />

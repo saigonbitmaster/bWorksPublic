@@ -13,7 +13,7 @@ export default {
   numberAlertHigh: 'High alert count: %{val}',
   numberAlertLow: 'Low alert count: %{val}',
   numberAlertCriticalLow: 'Critical low alert count: %{val}',
-  sumWaterSource: 'Water source count: %{val}',
+  sumbworksSource: 'bworks source count: %{val}',
 
   fields: {
     name: 'Name',
@@ -29,8 +29,8 @@ export default {
     selectParameter: 'Select parameter',
     selectGroup: 'Select group',
     selectSource: 'Select source',
-    waterSourceName: 'Water source ame',
-    waterUsage: 'Water usage (m³)',
+    bworksSourceName: 'bworks source ame',
+    bworksUsage: 'bworks usage (m³)',
     alert: 'Alert',
     logTime: 'LogTime',
     ...commonFields,

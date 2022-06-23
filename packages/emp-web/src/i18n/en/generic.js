@@ -122,7 +122,7 @@ export default {
     reportDebtClient: 'Client debts',
     reportRevenueLossClient: 'Commercial revenue loss clients',
     reportIncome: 'Revenue/volume',
-    reportRevenueLossWater: 'Water loss',
+    reportRevenueLossbworks: 'bworks loss',
     importGeo: 'Import geo data',
     parentMenuClientCommunication: 'Communications',
     TicketSupport: 'Support ticket',

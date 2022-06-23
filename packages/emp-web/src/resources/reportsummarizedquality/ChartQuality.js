@@ -40,7 +40,7 @@ class ChartQuality extends Component {
       return (
         <div style={{ backgroundColor: '#fff', border: '1px solid #999', margin: 0, padding: 5 }}>
           <span>
-            {`${translate('generic.waterSource')}: ${payload[1].name}`}
+            {`${translate('generic.bworksSource')}: ${payload[1].name}`}
             <br />
             {`${translate('generic.time')}: ${
               type === 'hour' ? moment(logTime).format('HH:mm') : moment(logTime).format('DD/MM/YYYY')
