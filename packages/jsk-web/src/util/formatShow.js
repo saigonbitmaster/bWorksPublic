@@ -30,18 +30,3 @@ export const formatClientStatus = (translate, status) => {
       return '';
   }
 };
-export const formatClientAction = (translate, action) => {
-  // console.log('formatClientAction', action);
-  switch (action) {
-    case 'NEW':
-      return translate('generic.client.actionChoices.new');
-    case 'CONTRACT_SIGNED':
-      return translate('generic.client.actionChoices.contractSigned');
-    case 'INSTALL_WAITING':
-      return translate('generic.client.actionChoices.installWaiting');
-    case 'COMPLETE':
-      return translate('generic.client.actionChoices.complete');
-    default:
-      return '';
-  }
-};

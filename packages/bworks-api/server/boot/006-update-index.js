@@ -21,9 +21,6 @@ module.exports = async app => {
     async key => {
       let model = app.models[key];
       let dataSource = model.getDataSource();
-      // if (get(dataSource, 'settings.database') !== 'toanNmsLog2') {
-      //   return;
-      // }
       if (get(dataSource, 'settings.connector') === 'mongodb') {
         // get index history in model database
         if (!indexHistoryMap[dataSource.name]) {
@@ -69,4 +66,3 @@ module.exports = async app => {
     err => (err ? console.error('Update Index error', err) : console.log('Update Index OK!')),
   ); // eslint-disable-line no-console)
 };
-/* eslint-enable no-console */

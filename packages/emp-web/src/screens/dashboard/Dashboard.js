@@ -5,21 +5,21 @@ import { CustomPage, withDataProvider, CUSTOM } from 'ra-loopback3';
 import { Grid, withTheme } from '@material-ui/core';
 import TopStatistic from './widget/TopStatistic';
 import Table from './table.js';
-import Lapostjobstatus from './Lapostjobstatus';
+import LatestStatus from './LatestStatus';
 
 class Dashboard extends React.Component {
-  state = { currentStatus: [], baseOnFlowLogger: false };
+  state = { currentStatus: [], basedOnPostedJob: false };
   componentDidMount() {
  //   this.loadStatus();
   }
 
   loadStatus = () => {
     const { dataProvider } = this.props;
-    let { baseOnFlowLogger } = this.state;
+    let { basedOnPostedJob } = this.state;
     dataProvider(CUSTOM, 'bworksSources', {
       subUrl: 'dashboard',
       method: 'get',
-      query: { mode: baseOnFlowLogger ? 'dataLogger' : 'bworksSource' },
+      query: { mode: basedOnPostedJob ? 'dataLogger' : 'bworksSource' },
     }).then(res => {
       if (res) {
         this.setState({ currentStatus: res.data });
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
   onChangeDisPlay = (e, value) => {
     this.setState(
       {
-        baseOnFlowLogger: value,
+        basedOnPostedJob: value,
       },
       this.loadStatus,
     );
@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
 
   render() {
     const { theme } = this.props;
-    const { currentStatus, baseOnFlowLogger } = this.state;
+    const { currentStatus, basedOnPostedJob } = this.state;
     return (
       <CustomPage title={'generic.pages.dashboard'}>
         <Grid container spacing={2}>
@@ -49,9 +49,9 @@ class Dashboard extends React.Component {
           <Table />
           </Grid>
           <Grid item xs={12} md={3} style={{ display: 'flex' }}>
-            <Lapostjobstatus
+            <LatestStatus
               currentStatus={currentStatus}
-              baseOnFlowLogger={baseOnFlowLogger}
+              basedOnPostedJob={basedOnPostedJob}
               onChangeDisPlay={this.onChangeDisPlay}
             />
           </Grid>

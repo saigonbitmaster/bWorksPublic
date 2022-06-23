@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import config from '../../Config';
 
-class CreatePostJob extends Component {
+class CreateDeposit extends Component {
   render() {
     const { props } = this;
     return (
@@ -37,7 +37,7 @@ class CreatePostJob extends Component {
   }
 }
 
-CreatePostJob.propTypes = {
+CreateDeposit.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -45,7 +45,7 @@ CreatePostJob.propTypes = {
   hasEdit: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-CreatePostJob.detaultProps = {
+CreateDeposit.detaultProps = {
   hasList: true,
   hasShow: true,
   hasCreate: false,
@@ -53,4 +53,4 @@ CreatePostJob.detaultProps = {
 };
 
 const enhance = compose(translate);
-export default enhance(CreatePostJob);
+export default enhance(CreateDeposit);

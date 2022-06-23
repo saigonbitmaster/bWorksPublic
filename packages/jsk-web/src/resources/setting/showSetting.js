@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import { Show, HtmlField, TextField, translate, FlexForm, SelectField, DateField, NumberField } from 'ra-loopback3';
 import config from '../../Config';
 
-class ShowPostJob extends Component {
+class ShowSetting extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
@@ -33,12 +33,12 @@ class ShowPostJob extends Component {
   }
 }
 
-ShowPostJob.propTypes = {
+ShowSetting.propTypes = {
   translate: PropTypes.any,
 };
 
-ShowPostJob.detaultProps = {
+ShowSetting.detaultProps = {
   hasShow: true,
 };
 const enhance = compose(translate);
-export default enhance(ShowPostJob);
+export default enhance(ShowSetting);

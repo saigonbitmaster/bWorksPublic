@@ -25,11 +25,11 @@ const Filters = props => (
 
 let title = "Smart contract address: addr1wy27ag0w4dzhldz5tunqhlyy2pkllz6sym5zm509z659ngxgumgve"
 
-class ListPostJob extends Component {
+class ListContractedJob extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
-      <List {...rest} filters={<Filters />} resource="postjobs"  title={title} filter={{selected: true, employerAgreed: true, jobSeekerAgreed: true}} hasCreate={false}>
+      <List {...rest} filters={<Filters />} resource="ContractedJobs"  title={title} filter={{selected: true, employerAgreed: true, jobSeekerAgreed: true}} hasCreate={false}>
         <Datagrid>
           <TextField source="name" label="Job name"/>
           <TextField source="bidder" />
@@ -48,7 +48,7 @@ class ListPostJob extends Component {
   }
 }
 
-ListPostJob.propTypes = {
+ListContractedJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -56,4 +56,4 @@ ListPostJob.propTypes = {
   hasEdit: PropTypes.bool,
 };
 
-export default compose(translate)(ListPostJob);
+export default compose(translate)(ListContractedJob);

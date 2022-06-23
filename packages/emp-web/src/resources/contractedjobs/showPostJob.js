@@ -5,11 +5,11 @@ import { Grid } from '@material-ui/core';
 import { Show, HtmlField, TextField, translate, FlexForm, SelectField, DateField, NumberField, BooleanField } from 'ra-loopback3';
 import config from '../../Config';
 
-class ShowPostJob extends Component {
+class ShowContractedJob extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
-      <Show {...rest} resource="postjobs" hasEdit={false}>
+      <Show {...rest} resource="ContractedJobs" hasEdit={false}>
         <FlexForm toolbar={false} style={{ flexGrow: 1 }} spacing={2}>
 
 
@@ -81,12 +81,12 @@ class ShowPostJob extends Component {
   }
 }
 
-ShowPostJob.propTypes = {
+ShowContractedJob.propTypes = {
   translate: PropTypes.any,
 };
 
-ShowPostJob.detaultProps = {
+ShowContractedJob.detaultProps = {
   hasShow: true,
 };
 const enhance = compose(translate);
-export default enhance(ShowPostJob);
+export default enhance(ShowContractedJob);

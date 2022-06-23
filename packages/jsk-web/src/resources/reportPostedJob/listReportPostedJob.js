@@ -23,11 +23,11 @@ const Filters = props => (
   </Filter>
 );
 
-class ListPostJob extends Component {
+class ListReportPostJob extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
-      <List {...rest} filters={<Filters />} resource="postjobs">
+      <List {...rest} filters={<Filters />} resource="ReportPostJobs">
         <Datagrid>
           <TextField source="name" />
           <DateField source="expectedDate" label="expected complete date"/>
@@ -45,7 +45,7 @@ class ListPostJob extends Component {
   }
 }
 
-ListPostJob.propTypes = {
+ListReportPostJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -53,4 +53,4 @@ ListPostJob.propTypes = {
   hasEdit: PropTypes.bool,
 };
 
-export default compose(translate)(ListPostJob);
+export default compose(translate)(ListReportPostJob);

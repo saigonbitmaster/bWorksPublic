@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Create,
-  FlexForm,
-  TextInput,
-  required,
-  translate,
-  
-  EditorInput,
-  DateTimeInput,
-} from 'ra-loopback3';
+import { Create, FlexForm, TextInput, required, translate, EditorInput, DateTimeInput } from 'ra-loopback3';
 import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 
-class CreatePostJob extends Component {
+class CreateSetting extends Component {
   render() {
     const { props } = this;
     return (
@@ -40,15 +31,14 @@ class CreatePostJob extends Component {
   }
 }
 
-CreatePostJob.propTypes = {
+CreateSetting.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
   hasCreate: PropTypes.bool,
   hasEdit: PropTypes.bool,
-  staticcontext: PropTypes.any,
 };
-CreatePostJob.detaultProps = {
+CreateSetting.detaultProps = {
   hasList: true,
   hasShow: true,
   hasCreate: false,
@@ -56,4 +46,4 @@ CreatePostJob.detaultProps = {
 };
 
 const enhance = compose(translate);
-export default enhance(CreatePostJob);
+export default enhance(CreateSetting);

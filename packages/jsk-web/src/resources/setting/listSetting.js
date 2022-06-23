@@ -1,4 +1,3 @@
-//tham khảo: https://www.epa.ie/pubs/advice/bworks/quality/bworks_Quality.pdf
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -8,18 +7,11 @@ import {
   Datagrid,
   EditButton,
   ShowButton,
-  SelectField,
   Filter,
   TextInput,
   DateField,
-  NumberField,
-  ArrayField,
-  SingleFieldList,
-  ChipField
 } from 'ra-loopback3';
-import {Chip} from "@material-ui/core"
 import { compose } from 'recompose';
-import config from '../../Config';
 
 const Filters = props => (
   <Filter {...props}>
@@ -29,20 +21,7 @@ const Filters = props => (
 
 
 
-const TagsField = ({ record }) => (
-  record.skills? 
-  <ul>
-      {record.skills.map(item => (
-          <Chip key={item} label={item} />
-      ))}
-  </ul>
-  : null
-)
-TagsField.defaultProps = {
-  addLabel: true
-};
-
-class ListPostJob extends Component {
+class ListSetting extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
@@ -61,7 +40,7 @@ class ListPostJob extends Component {
   }
 }
 
-ListPostJob.propTypes = {
+ListSetting.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -69,4 +48,4 @@ ListPostJob.propTypes = {
   hasEdit: PropTypes.bool,
 };
 
-export default compose(translate)(ListPostJob);
+export default compose(translate)(ListSetting);

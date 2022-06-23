@@ -17,7 +17,7 @@ let contractTypes = [
   { id: 'punish', name: 'Punish' },
 ];
 
-class EditPartner extends Component {
+class EditJob extends Component {
   render() {
     const { props } = this;
     return (
@@ -74,16 +74,16 @@ class EditPartner extends Component {
   }
 }
 
-EditPartner.propTypes = {
+EditJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-EditPartner.detaultProps = {
+EditJob.detaultProps = {
   hasList: true,
   hasShow: true,
 };
 
 const enhance = compose(translate);
-export default enhance(EditPartner);
+export default enhance(EditJob);

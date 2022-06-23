@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import config from '../../Config';
 
-class EditPartner extends Component {
+class EditDeposit extends Component {
   render() {
     const { props } = this;
     return (
@@ -37,16 +37,16 @@ class EditPartner extends Component {
   }
 }
 
-EditPartner.propTypes = {
+EditDeposit.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-EditPartner.detaultProps = {
+EditDeposit.detaultProps = {
   hasList: true,
   hasShow: true,
 };
 
 const enhance = compose(translate);
-export default enhance(EditPartner);
+export default enhance(EditDeposit);

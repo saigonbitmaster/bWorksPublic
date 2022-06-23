@@ -5,7 +5,7 @@ import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
 import { bworksSourceIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class bworksSourceCount extends Component {
+class BidJob extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -34,7 +34,7 @@ class bworksSourceCount extends Component {
 
   dashboardData = () => {
     this.props
-      .dataProvider(CUSTOM, 'bworksSources', {
+      .dataProvider(CUSTOM, 'bidjobs', {
         subUrl: 'dashboard',
         method: 'get',
         query: { mode: 'widget' },
@@ -60,9 +60,9 @@ class bworksSourceCount extends Component {
   }
 }
 
-bworksSourceCount.propTypes = {
+BidJob.propTypes = {
   translate: PropTypes.func,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withDataProvider);
-export default enhance(bworksSourceCount);
+export default enhance(BidJob);

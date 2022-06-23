@@ -23,7 +23,7 @@ const Filters = props => (
   </Filter>
 );
 let walletAddress = "My wallet address: addr_test1qq0rug5wxyd2fnwdyvlc5vc6jk8tq59nwjn7xx5gdwdj9p43ge73vmf7xvkn23tkyq30gd2jtlgztf3rw0mtvkjzv4vqr6wnz3"
-class ListPostJob extends Component {
+class ListReportFund extends Component {
   render() {
     const { translate, ...rest } = this.props;
    
@@ -47,7 +47,7 @@ class ListPostJob extends Component {
   }
 }
 
-ListPostJob.propTypes = {
+ListReportFund.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -55,4 +55,4 @@ ListPostJob.propTypes = {
   hasEdit: PropTypes.bool,
 };
 
-export default compose(translate)(ListPostJob);
+export default compose(translate)(ListReportFund);

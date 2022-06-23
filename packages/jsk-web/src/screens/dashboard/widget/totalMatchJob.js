@@ -6,7 +6,7 @@ import green from '@material-ui/core/colors/green';
 import { QuantityIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class TotalSourceCapacity extends Component {
+class TotalMatchJobs extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -48,9 +48,9 @@ class TotalSourceCapacity extends Component {
   }
 }
 
-TotalSourceCapacity.propTypes = {
+TotalMatchJobs.propTypes = {
   translate: PropTypes.func,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withDataProvider);
-export default enhance(TotalSourceCapacity);
+export default enhance(TotalMatchJobs);

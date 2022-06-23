@@ -6,7 +6,7 @@ import blue from '@material-ui/core/colors/blue';
 import { FactoryIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class FlowLoggerStatisticWidget extends Component {
+class Fund extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -25,19 +25,6 @@ class FlowLoggerStatisticWidget extends Component {
     };
   }
 
-  /* loadStatus = () => {
-        const { dataProvider } = this.props;
-        const { baseOnFlowLogger } = this.state;
-        dataProvider(CUSTOM, 'bworksSource', {
-            subUrl: 'dashboard',
-            method: 'get',
-            query: { mode: baseOnFlowLogger ? 'FlowLogger' : 'Dma' },
-        }).then(res => {
-            if (res) {
-                this.setState({ currentStatus: res.data });
-            }
-        });
-    };*/
 
   dashboardData = () => {
     this.props
@@ -66,9 +53,9 @@ class FlowLoggerStatisticWidget extends Component {
   }
 }
 
-FlowLoggerStatisticWidget.propTypes = {
+Fund.propTypes = {
   translate: PropTypes.func,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withDataProvider);
-export default enhance(FlowLoggerStatisticWidget);
+export default enhance(Fund);

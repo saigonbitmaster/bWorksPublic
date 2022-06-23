@@ -25,7 +25,7 @@ let contractStatus = [
 let contractTypes = [
   { id: 'escrow', name: 'Escrow' },
 ];
-class CreatePostJob extends Component {
+class ContractedJob extends Component {
   render() {
     const { props } = this;
     return (
@@ -80,7 +80,7 @@ class CreatePostJob extends Component {
   }
 }
 
-CreatePostJob.propTypes = {
+ContractedJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -88,7 +88,7 @@ CreatePostJob.propTypes = {
   hasEdit: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-CreatePostJob.detaultProps = {
+ContractedJob.detaultProps = {
   hasList: true,
   hasShow: true,
   hasCreate: false,
@@ -96,4 +96,4 @@ CreatePostJob.detaultProps = {
 };
 
 const enhance = compose(translate);
-export default enhance(CreatePostJob);
+export default enhance(ContractedJob);

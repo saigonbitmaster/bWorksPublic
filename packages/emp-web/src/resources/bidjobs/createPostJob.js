@@ -5,11 +5,11 @@ import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import config from '../../Config';
 
-class CreatePostJob extends Component {
+class CreateBidJob extends Component {
   render() {
     const { props } = this;
     return (
-      <Create {...props} resource="postjobs">
+      <Create {...props} resource="BidJobs">
         <FlexForm style={{ flexGrow: 1 }} spacing={2} redirect="list" submitOnEnter={false}>
         <Grid middle container spacing={2}>
             <Grid middle item xs={12} sm={6}>
@@ -50,7 +50,7 @@ class CreatePostJob extends Component {
   }
 }
 
-CreatePostJob.propTypes = {
+CreateBidJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -58,7 +58,7 @@ CreatePostJob.propTypes = {
   hasEdit: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-CreatePostJob.detaultProps = {
+CreateBidJob.detaultProps = {
   hasList: true,
   hasShow: true,
   hasCreate: false,
@@ -66,4 +66,4 @@ CreatePostJob.detaultProps = {
 };
 
 const enhance = compose(translate);
-export default enhance(CreatePostJob);
+export default enhance(CreateBidJob);

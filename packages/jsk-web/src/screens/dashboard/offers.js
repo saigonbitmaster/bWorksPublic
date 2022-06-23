@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import { translate } from 'ra-loopback3';
 import config from '../../Config';
-import { NormalbworksSourceIcon, AlertbworksSourceIcon, LogTimeIcon, bworksSourceIcon } from '../../styles/Icons';
+import { NormaljobsIcon, AlertjobsIcon, LogTimeIcon, jobsIcon } from '../../styles/Icons';
 
 const translateColor = alert => {
   switch (alert) {
@@ -39,36 +39,36 @@ const Offers = ({ currentStatus, classes, translate, theme, getDmaPadding }) => 
   //   return null;
   // }
 let currentStatus1 = [
-  {bworksSourceName: "Write Cardano ESROW smart contract", employer: "Employer name/wallet address: Peter", bidValue: "Bid at value (ADA): 120"},
-  {bworksSourceName: "Create Cardano Native and NFT token", employer: "Employer name/wallet address: addr_test1qrtzr4zdlc3kw7mv4mtg2v3f3q592za2psnpmvsm4x9t0t43ge73vmf7xvkn23tkyq30gd2jtlgztf3rw0mtvkjzv4vqcv0ejv", bidValue: "Bid value (ADA): 120"},
-  {bworksSourceName: "Build Cardano testNet node", employer: "Employer name/wallet address: Jenny", bidValue: "Bid at value (ADA): 120"},
-  {bworksSourceName: "Develop android/IOS walllet", employer: "Employer name/wallet address: Jackson", bidValue: "Bid at value (ADA): 120"}
+  {jobsName: "Write Cardano ESROW smart contract", employer: "Employer name/wallet address: Peter", bidValue: "Bid at value (ADA): 120"},
+  {jobsName: "Create Cardano Native and NFT token", employer: "Employer name/wallet address: addr_test1qrtzr4zdlc3kw7mv4mtg2v3f3q592za2psnpmvsm4x9t0t43ge73vmf7xvkn23tkyq30gd2jtlgztf3rw0mtvkjzv4vqcv0ejv", bidValue: "Bid value (ADA): 120"},
+  {jobsName: "Build Cardano testNet node", employer: "Employer name/wallet address: Jenny", bidValue: "Bid at value (ADA): 120"},
+  {jobsName: "Develop android/IOS walllet", employer: "Employer name/wallet address: Jackson", bidValue: "Bid at value (ADA): 120"}
 ]
   return (
     <List component="div" disablePadding>
-      {currentStatus1.map(bworksSource => (
-        <Fragment key={bworksSource.bworksSourceName}>
-          <ListItem button style={{ paddingLeft: getDmaPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
+      {currentStatus1.map(jobs => (
+        <Fragment key={jobs.jobsName}>
+          <ListItem button style={{ paddingLeft: getDmaPadding({ level: 1 }) }} key={jobs.jobsName}>
             <ListItemIcon>
-              <bworksSourceIcon />
+              <jobsIcon />
             </ListItemIcon>
-            <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
+            <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{jobs.jobsName}</b>} />
             <ListItemSecondaryAction>
               <Tooltip title={translate('generic.emp.widget.bidDate')}>
                 <Chip
                   avatar={
-                    bworksSource.totalAlert == 0 ? (
+                    jobs.totalAlert == 0 ? (
                       <Avatar className={classes.chipIcon}>
-                        <NormalbworksSourceIcon style={{ color: translateColor(3) }} />
+                        <NormaljobsIcon style={{ color: translateColor(3) }} />
                       </Avatar>
                     ) : (
                       <Avatar className={classes.chipIcon}>
-                        <AlertbworksSourceIcon style={{ color: translateColor(2) }} />
+                        <AlertjobsIcon style={{ color: translateColor(2) }} />
                       </Avatar>
                     )
                   }
                   className={classes.chip}
-                  label={bworksSource.totalAlert}
+                  label={jobs.totalAlert}
                 />
               </Tooltip>
             </ListItemSecondaryAction>
@@ -77,14 +77,14 @@ let currentStatus1 = [
 
           <ListItem
             button
-            onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
+            onClick={() => this.showStatistic(jobs.jobsName)}
             className={classes.nested}
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-            key={bworksSource.logTime}
+            key={jobs.logTime}
           >
             <ListItemSecondaryAction>
             
-                <Fragment key={bworksSource.bworksSourceName}>
+                <Fragment key={jobs.jobsName}>
                   <Tooltip title={translate('generic.emp.widget.bidDate')}>
                     <Chip
                       avatar={
@@ -94,7 +94,7 @@ let currentStatus1 = [
                       }
                       className={classes.chip}
                       label={moment().format('YYYY-MM-DD HH:mm')}
-                      style={{ color: translateColor(bworksSource.alert) }}
+                      style={{ color: translateColor(jobs.alert) }}
                     />
                   </Tooltip>
                 </Fragment>
@@ -103,19 +103,19 @@ let currentStatus1 = [
           </ListItem>
           <ListItem
             button
-            onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
+            onClick={() => this.showStatistic(jobs.jobsName)}
             className={classes.nested}
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-            key={bworksSource.totalFlowRate}
+            key={jobs.total}
           >
             <ListItemSecondaryAction>
               
-                <Fragment key={bworksSource.bworksSourceName}>
+                <Fragment key={jobs.jobsName}>
                   <Tooltip title={translate('generic.emp.widget.employer')}>
                     <Chip
                       className={classes.chip}
-                      label={bworksSource.employer}
-                      style={{ color: translateColor(bworksSource.alert) }}
+                      label={jobs.employer}
+                      style={{ color: translateColor(jobs.alert) }}
                     />
                   </Tooltip>
                 </Fragment>
@@ -124,19 +124,19 @@ let currentStatus1 = [
           </ListItem>
           <ListItem
             button
-            onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
+            onClick={() => this.showStatistic(jobs.jobsName)}
             className={classes.nested}
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-            key={bworksSource.avgNtu}
+            key={jobs.avgNtu}
           >
             <ListItemSecondaryAction>
              
-                <Fragment key={bworksSource.bworksSourceName}>
+                <Fragment key={jobs.jobsName}>
                   <Tooltip title={translate('generic.emp.widget.bidValue')}>
                     <Chip
                       className={classes.chip}
-                      label={bworksSource.bidValue}
-                      style={{ color: translateColor(bworksSource.alert) }}
+                      label={jobs.bidValue}
+                      style={{ color: translateColor(jobs.alert) }}
                     />
                   </Tooltip>
                 </Fragment>

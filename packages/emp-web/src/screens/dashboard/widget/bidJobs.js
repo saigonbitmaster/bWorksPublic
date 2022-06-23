@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
-import { bworksSourceIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
 class BidJobs extends Component {

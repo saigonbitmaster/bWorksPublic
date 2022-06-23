@@ -56,7 +56,7 @@ class PostedJobs extends Component {
               </ListItemIcon>
               <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
               <ListItemSecondaryAction>
-                <Tooltip title={translate('generic.totalDataLogger')}>
+                <Tooltip title={translate('generic.totalJobs')}>
                   <Chip
                     avatar={
                       <Avatar className={classes.chipIcon}>

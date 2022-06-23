@@ -6,7 +6,7 @@ import { withTheme } from '@material-ui/core';
 import { ReportVolumeIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
-class bworksSourceStatistic extends Component {
+class Contract extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -54,10 +54,10 @@ class bworksSourceStatistic extends Component {
   }
 }
 
-bworksSourceStatistic.propTypes = {
+Contract.propTypes = {
   translate: PropTypes.func,
   theme: PropTypes.object,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withTheme, withDataProvider);
-export default enhance(bworksSourceStatistic);
+export default enhance(Contract);

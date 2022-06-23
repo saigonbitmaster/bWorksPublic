@@ -8,7 +8,7 @@ import config from '../../Config';
 
 let status = [{id: "opening", name: "Opening"},{id: "candidate selected", name: "Candidate selected"}, {id: "submit contract", name: "Submit contract"}]
 
-class EditPartner extends Component {
+class EditBidJob extends Component {
   render() {
     const { props } = this;
     return (
@@ -66,16 +66,16 @@ class EditPartner extends Component {
   }
 }
 
-EditPartner.propTypes = {
+EditBidJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-EditPartner.detaultProps = {
+EditBidJob.detaultProps = {
   hasList: true,
   hasShow: true,
 };
 
 const enhance = compose(translate);
-export default enhance(EditPartner);
+export default enhance(EditBidJob);

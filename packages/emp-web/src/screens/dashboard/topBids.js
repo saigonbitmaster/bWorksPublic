@@ -16,10 +16,10 @@ import { translate } from 'ra-loopback3';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
-import { bworksSourceIcon, LogTimeIcon, FlowLoggerIcon } from '../../styles/Icons';
+import { jobsIcon, LogTimeIcon, FlowLoggerIcon } from '../../styles/Icons';
 import config from '../../Config';
 
-class StatusItemBaseFlowLogger extends Component {
+class StatusItemBasedOnPostedJob extends Component {
   // eslint-disable-next-line
   showStatistic = id => {
     // this.props.push(`statisticFlowLogger/${id}`);
@@ -44,15 +44,15 @@ class StatusItemBaseFlowLogger extends Component {
     const { currentStatus, classes, theme, getPadding, translate } = this.props;
     return (
       <List component="div" disablePadding>
-        {currentStatus.map((bworksSource, index) => (
-          <Fragment key={bworksSource.bworksSourceName}>
-            <ListItem button style={{ paddingLeft: getPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
+        {currentStatus.map((jobs, index) => (
+          <Fragment key={jobs.jobsName}>
+            <ListItem button style={{ paddingLeft: getPadding({ level: 1 }) }} key={jobs.jobsName}>
               <ListItemIcon>
-                <bworksSourceIcon />
+                <jobsIcon />
               </ListItemIcon>
-              <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
+              <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{jobs.jobsName}</b>} />
               <ListItemSecondaryAction>
-                <Tooltip title={translate('generic.totalDataLogger')}>
+                <Tooltip title={translate('generic.totalJobs')}>
                   <Chip
                     avatar={
                       <Avatar className={classes.chipIcon}>
@@ -60,14 +60,14 @@ class StatusItemBaseFlowLogger extends Component {
                       </Avatar>
                     }
                     className={classes.chip}
-                    label={Array.isArray(bworksSource.dataLoggers) ? bworksSource.dataLoggers.length : ''}
+                    label={Array.isArray(jobs.dataLoggers) ? jobs.dataLoggers.length : ''}
                   />
                 </Tooltip>
               </ListItemSecondaryAction>
             </ListItem>
-            {Array.isArray(bworksSource.dataLoggers) && bworksSource.dataLoggers.length > 0 && (
+            {Array.isArray(jobs.dataLoggers) && jobs.dataLoggers.length > 0 && (
               <List component="div" disablePadding>
-                {bworksSource.dataLoggers.map(dataLogger => (
+                {jobs.dataLoggers.map(dataLogger => (
                   <Fragment key={dataLogger._id}>
                     <Divider style={{ marginLeft: getPadding({ level: 2 }) + theme.spacing(1) }} />
                     <ListItem
@@ -216,7 +216,7 @@ class StatusItemBaseFlowLogger extends Component {
   }
 }
 
-StatusItemBaseFlowLogger.propTypes = {
+StatusItemBasedOnPostedJob.propTypes = {
   translate: PropTypes.func,
   getPadding: PropTypes.func,
   currentStatus: PropTypes.array,
@@ -226,4 +226,4 @@ StatusItemBaseFlowLogger.propTypes = {
 };
 
 const enhance = compose(translate, connect(null, { push: pushAction }));
-export default enhance(StatusItemBaseFlowLogger);
+export default enhance(StatusItemBasedOnPostedJob);

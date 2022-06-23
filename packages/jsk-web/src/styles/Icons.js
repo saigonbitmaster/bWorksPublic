@@ -122,7 +122,6 @@ export {
   FlipToBack as bworksSourceGroupIcon,
   WavesRounded as bworksSourceIcon,
   BorderColor as SensorIcon,
-  Devices as DataLoggerIcon,
   AddAlert as AlertThresholdIcon,
   NotificationImportant as AlertbworksSourceIcon,
   DoneAll as NormalbworksSourceIcon,

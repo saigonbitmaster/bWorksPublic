@@ -61,7 +61,7 @@ class Lapostjobstatus extends Component {
   };
 
   render() {
-    const { classes, theme, currentStatus, baseOnFlowLogger, onChangeDisPlay, translate } = this.props;
+    const { classes, theme, currentStatus, basedOnPostedJob, onChangeDisPlay, translate } = this.props;
     return (
       <Card style={{ width: '100%' }}>
         <CardHeader
@@ -74,13 +74,13 @@ class Lapostjobstatus extends Component {
           subheader={
             <FormControlLabel
               label="Selected candidates"
-              control={<Checkbox onChange={onChangeDisPlay} checked={baseOnFlowLogger} />}
+              control={<Checkbox onChange={onChangeDisPlay} checked={basedOnPostedJob} />}
             />
           }
         />
         <CardContent className={classes.bidItem}>
           <Divider />
-          {baseOnFlowLogger ? (
+          {basedOnPostedJob ? (
             <TopBids
               currentStatus={currentStatus}
               classes={classes}
@@ -105,7 +105,7 @@ Lapostjobstatus.propTypes = {
   theme: PropTypes.object,
   classes: PropTypes.object,
   currentStatus: PropTypes.array,
-  baseOnFlowLogger: PropTypes.bool,
+  basedOnPostedJob: PropTypes.bool,
   onChangeDisPlay: PropTypes.func,
   translate: PropTypes.func,
 };

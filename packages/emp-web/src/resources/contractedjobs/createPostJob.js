@@ -25,11 +25,11 @@ let contractStatus = [
 let contractTypes = [
   { id: 'escrow', name: 'Escrow' },
 ];
-class CreatePostJob extends Component {
+class CreateContractedJob extends Component {
   render() {
     const { props } = this;
     return (
-      <Create {...props} resource="postjobs">
+      <Create {...props} resource="ContractedJobs">
         <FlexForm style={{ flexGrow: 1 }} spacing={2} redirect="list" submitOnEnter={false}>
           <Grid middle container spacing={2}>
             <Grid middle item xs={12} sm={6}>
@@ -80,7 +80,7 @@ class CreatePostJob extends Component {
   }
 }
 
-CreatePostJob.propTypes = {
+CreateContractedJob.propTypes = {
   translate: PropTypes.func,
   hasList: PropTypes.bool,
   hasShow: PropTypes.bool,
@@ -88,7 +88,7 @@ CreatePostJob.propTypes = {
   hasEdit: PropTypes.bool,
   staticcontext: PropTypes.any,
 };
-CreatePostJob.detaultProps = {
+CreateContractedJob.detaultProps = {
   hasList: true,
   hasShow: true,
   hasCreate: false,
@@ -96,4 +96,4 @@ CreatePostJob.detaultProps = {
 };
 
 const enhance = compose(translate);
-export default enhance(CreatePostJob);
+export default enhance(CreateContractedJob);

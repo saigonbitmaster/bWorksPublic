@@ -6,9 +6,6 @@ import {
   TextInput,
   required,
   translate,
-  
-  EditorInput,
-  DateTimeInput,
 } from 'ra-loopback3';
 import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
