@@ -46,8 +46,6 @@ package-lock.json
 
 
 
-/packages/bworks-api/server/init-data
-
 .env.local
 .env.development.local
 .env.test.local
