@@ -46,8 +46,6 @@ package-lock.json
 
 
 
-/packages/bworks-api/common/cms*
-
 /packages/bworks-api/common/emp*
 
 /packages/bworks-api/common/jsk*
