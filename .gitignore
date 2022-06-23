@@ -39,7 +39,8 @@ package-lock.json
 /tmp
 /packages/*/.env
 # misc
-/packages/jsk-web
+/packages/jsk-web/src/screens
+/packages/jsk-web/src/i18n
 /packages/emp-web
 /packages/web-common
 
