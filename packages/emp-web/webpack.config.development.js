@@ -3,8 +3,6 @@ const fs = require('fs');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
-//dev
 const webpack = require('webpack');
 const envVariables = require('ra-loopback3/webpack-config/env-variables');
 
@@ -65,10 +63,6 @@ let config = {
       chunkFilename: '[id].css',
     }),
     new ManifestPlugin({ serialize: () => fs.readFileSync('./public/manifest.json') }),
-    // new ServiceWorkerWebpackPlugin({
-    //   entry: path.join(__dirname, './src/serviceWorker.js'),
-    //   excludes: ['**/.*', '**/*.map', '*.html'],
-    // }),
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
@@ -79,20 +73,3 @@ let config = {
 };
 
 module.exports = config;
-
-/*
-
-devServer: {
-    port: 3004,
-        proxy: {
-        '/api': 'http://localhost:4001',
-    },
-    stats: {
-        entrypoints: false,
-            modules: false,
-            colors: true,
-    },
-    hot: true,
-        headers: {"Access-Control-Allow-Origin": "*"
-    },
-},*/

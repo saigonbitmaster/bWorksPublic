@@ -3,9 +3,6 @@ const fs = require('fs');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
-// production
-// var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const envVariables = require('ra-loopback3/webpack-config/env-variables');
 
@@ -47,19 +44,6 @@ let config = {
       chunkFilename: '[id].css',
     }),
     new ManifestPlugin({ serialize: () => fs.readFileSync('./public/manifest.json') }),
-    // new ServiceWorkerWebpackPlugin({
-    //   entry: path.join(__dirname, './src/serviceWorker.js'),
-    //   excludes: ['**/.*', '**/*.map', '*.html'],
-    //   publicPath: '/nms/',
-    // }),
-    // new OptimizeCssAssetsPlugin({
-    //   assetNameRegExp: /\.css$/g,
-    //   cssProcessor: require('cssnano'),
-    //   cssProcessorPluginOptions: {
-    //     preset: ['default', { discardComments: { removeAll: true } }],
-    //   },
-    //   canPrint: true,
-    // }),
   ],
   resolve: {
     alias: {

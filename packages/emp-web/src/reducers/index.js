@@ -5,6 +5,4 @@ import gisReducer from './gisReducer';
 export default {
   common: commonReducer,
   theme: themeReducer,
-  design: designReducer,
-  gis: gisReducer,
 };
