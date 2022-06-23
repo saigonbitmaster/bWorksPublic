@@ -5,7 +5,7 @@ import { CustomPage, withDataProvider, CUSTOM } from 'ra-loopback3';
 import { Grid, withTheme } from '@material-ui/core';
 import TopStatistic from './widget/TopStatistic';
 import Table from './table.js';
-import LatestStatus from './LatestStatus';
+import Lapostjobstatus from './Lapostjobstatus';
 
 class Dashboard extends React.Component {
   state = { currentStatus: [], baseOnFlowLogger: false };
@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
           <Table />
           </Grid>
           <Grid item xs={12} md={3} style={{ display: 'flex' }}>
-            <LatestStatus
+            <Lapostjobstatus
               currentStatus={currentStatus}
               baseOnFlowLogger={baseOnFlowLogger}
               onChangeDisPlay={this.onChangeDisPlay}

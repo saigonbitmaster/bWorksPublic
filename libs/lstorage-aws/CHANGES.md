@@ -7,7 +7,7 @@
 2018-06-20, Version 3.4.0
 =========================
 
- * added missing tests (Cory Gottschalk)
+ * added missing postjobs (Cory Gottschalk)
 
  * Updated "getFile" to send a 404 for ENOENT errors (Cory Gottschalk)
 
@@ -231,7 +231,7 @@
 2015-04-21, Version 1.4.0
 =========================
 
- * Fix the tests (Raymond Feng)
+ * Fix the postjobs (Raymond Feng)
 
  * this.options is undefined, should use options (Yazhong Liu)
 

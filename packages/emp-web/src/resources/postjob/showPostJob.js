@@ -21,7 +21,7 @@ class ShowPostJob extends Component {
   render() {
     const { translate, ...rest } = this.props;
     return (
-      <Show {...rest} resource="tests">
+      <Show {...rest} resource="postjobs">
         <FlexForm toolbar={false} style={{ flexGrow: 1 }} spacing={1}>
           <Grid middle container spacing={1}>
             <Grid middle item xs={12} sm={4}>

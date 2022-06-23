@@ -45,17 +45,3 @@ export const formatClientAction = (translate, action) => {
       return '';
   }
 };
-export const formatTypeRequest = (translate, action) => {
-  // console.log('formatClientAction', action);
-  switch (action) {
-    case 'NEW_INSTALL':
-      return translate('generic.client.typeRequestChoices.newInstall');
-    case 'REPLACE':
-      return translate('generic.client.typeRequestChoices.replace');
-    default:
-      return '';
-  }
-};
-export const formatLocation = position => {
-  return typeof position === 'object' ? `${position.lat || '_'},${position.lng || '_'}` : '';
-};

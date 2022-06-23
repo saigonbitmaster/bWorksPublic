@@ -55,7 +55,7 @@ const styles = theme => {
     },
   };
 };
-class LatestStatus extends Component {
+class Lapostjobstatus extends Component {
   getPadding = bid => {
     return (bid.level * 2 - 2) * this.props.theme.spacing(1);
   };
@@ -100,7 +100,7 @@ class LatestStatus extends Component {
     );
   }
 }
-LatestStatus.propTypes = {
+Lapostjobstatus.propTypes = {
   dataProvider: PropTypes.func,
   theme: PropTypes.object,
   classes: PropTypes.object,
@@ -110,4 +110,4 @@ LatestStatus.propTypes = {
   translate: PropTypes.func,
 };
 const enhance = compose(withStyles(styles), withTheme, withDataProvider, translate);
-export default enhance(LatestStatus);
+export default enhance(Lapostjobstatus);

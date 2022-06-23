@@ -29,7 +29,7 @@ class CreatePostJob extends Component {
   render() {
     const { props } = this;
     return (
-      <Create {...props} resource="tests">
+      <Create {...props} resource="postjobs">
         <FlexForm style={{ flexGrow: 1 }} spacing={2} redirect="list" submitOnEnter={false}>
           <Grid middle container spacing={2}>
             <Grid middle item xs={12} sm={6}>

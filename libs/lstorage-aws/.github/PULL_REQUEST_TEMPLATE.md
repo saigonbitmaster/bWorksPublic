@@ -20,6 +20,6 @@ https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments)
 - PR's without test coverage will be closed.
 -->
 
-- [ ] New tests added or existing tests modified to cover all changes
+- [ ] New postjobs added or existing postjobs modified to cover all changes
 - [ ] Code conforms with the [style
   guide](http://loopback.io/doc/en/contrib/style-guide.html)
