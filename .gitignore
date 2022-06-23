@@ -47,9 +47,6 @@ package-lock.json
 
 
 
-
-/packages/bworks-api/common/utils
-
 /packages/bworks-api/i18n
 
 /packages/bworks-api/server/boot
