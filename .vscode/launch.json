@@ -1,0 +1,25 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "DEV Program",
+      "cwd": "${workspaceFolder}/packages/bworks-api",
+      "program": "${workspaceFolder}/packages/bworks-api/server/server.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "outputCapture": "console",
+      "internalConsoleOptions": "neverOpen",
+      "runtimeArgs": ["--nolazy"],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Current",
+      "program": "${file}"
+    }
+  ]
+}
