@@ -48,51 +48,6 @@ utilCommon.checkExistData = function(data, key, field) {
   return false;
 };
 
-utilCommon.dmaHierarchy = function(currentDma, dmas, fullDma) {
-  let result = [{ id: currentDma.id }];
-  // get sub
-  if (dmas.length > 0) {
-    dmas.map(item => {
-      let subHierarchy = utilCommon.getSubDmaHierarchy(item, fullDma);
-      subHierarchy.map(subItem => {
-        result.push({ id: subItem.id });
-      });
-    });
-  }
-  return result;
-};
-
-utilCommon.getSubDmaHierarchy = function(dataDmaSelect, dataDmas) {
-  return utilCommon.dmaHierarchy(
-    dataDmaSelect,
-    dataDmas.filter(
-      d => d.level === dataDmaSelect.level + 1 && d.parentDmaId && d.parentDmaId.equals(dataDmaSelect.id),
-    ),
-    dataDmas,
-  );
-};
-
-// create by Mr.Hau
-// get all child DMA id
-// return : parent dma id and child dma id
-utilCommon.getAllChildDmaId = function(dataDmas, dataDmaSelect) {
-  let result = [];
-  let subHierarchy = utilCommon.getSubDmaHierarchy(dataDmaSelect, dataDmas);
-  subHierarchy.map(subItemId => {
-    result.push(subItemId.id); // get only id
-  });
-  return result;
-};
-
-// create by Mr.Hau
-// get all child level
-utilCommon.getAllChildLevel = function(maxLevel, levelCurrent) {
-  let result = [];
-  for (let i = levelCurrent; i <= maxLevel; i++) {
-    result.push(i);
-  }
-  return result;
-};
 
 // phan trang
 utilCommon.splitPage = function(data, limit, skip) {
@@ -149,36 +104,6 @@ utilCommon.sortFieldSpec = function(data, withFields, order) {
   return tmp;
 };
 
-// lay cac Dma theo :
-// + dma selected
-// + bao gom dma con
-// + toan mang
-utilCommon.getDmaIds = async function(model, dmaIdSelect, flgIncludeChild, flgAllDma) {
-  let cdt = {};
-  cdt.fields = { id: true };
-  let dataDmas = [];
-  if (flgAllDma) {
-    dataDmas = await model.app.models.Dma.find(cdt);
-    let tmp = [];
-    for (let i = 0; i < dataDmas.length; i++) {
-      tmp.push(dataDmas[i].id);
-    }
-    return tmp;
-  } else {
-    if (flgIncludeChild) {
-      cdt.fields = { id: true, level: true, parentDmaId: true };
-      dataDmas = await model.app.models.Dma.find(cdt);
-      let dataDmaSelect = await model.app.models.Dma.findById(dmaIdSelect, cdt);
-      if (!dmaIdSelect || !dataDmas || !dataDmas.length) {
-        return dataDmas;
-      }
-      return utilCommon.getAllChildDmaId(dataDmas, dataDmaSelect);
-    } else {
-      dataDmas.push(dmaIdSelect);
-      return dataDmas;
-    }
-  }
-};
 utilCommon.compareMonth = function(src, dst) {
   if (!src || !dst) {
     return '';
