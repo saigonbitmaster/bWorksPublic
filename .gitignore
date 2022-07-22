@@ -16,6 +16,7 @@
 .strong-pm
 .gadm
 .tmp
+.gitignore
 coverage
 node_modules
 package-lock.json
