@@ -25,6 +25,7 @@ package-lock.json
 /packages/*/server/*.local.json
 /packages/*/server/*.local.js
 /packages/schema-design
+/packages/org-libs
 # testing
 /coverage
 #cache
