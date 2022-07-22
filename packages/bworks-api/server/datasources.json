@@ -1,0 +1,20 @@
+{
+  "bWorksSystem": {
+    "name": "bWorksSystem",
+    "connector": "mongodb"
+  },
+  "bWorksData": {
+    "name": "bWorksData",
+    "connector": "mongodb"
+  },
+  "redis": {
+    "name": "redis"
+  },
+  "sourceStorage": {
+    "name": "sourceStorage"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  }
+}
