@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { NumberField, translate } from 'ra-loopback3';
+import { NumberField, translate } from 'ra';
 import {
   Card,
   CardHeader,

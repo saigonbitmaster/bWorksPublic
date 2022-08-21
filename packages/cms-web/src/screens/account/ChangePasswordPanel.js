@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Toolbar, Button, SaveButton, Edit, SimpleForm, TextInput } from 'ra-loopback3';
+import { Toolbar, Button, SaveButton, Edit, SimpleForm, TextInput } from 'ra';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
-import { withDataProvider, CUSTOM, MapRender } from 'ra-loopback3';
+import { withDataProvider, CUSTOM, MapRender } from 'ra';
 import { commonConfig } from '../../actions/mapActions';
 // mport MapRender from './MapRender';
 class MapRenderWithConfig extends Component {

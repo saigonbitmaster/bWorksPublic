@@ -9,7 +9,7 @@ import {
   translate,
   refreshView,
   CustomDatagrid,
-} from 'ra-loopback3';
+} from 'ra';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';

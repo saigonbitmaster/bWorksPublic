@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { Grid } from '@material-ui/core';
-import { Show, HtmlField, TextField, translate, FlexForm, SelectField, DateField, NumberField } from 'ra-loopback3';
+import { Show, HtmlField, TextField, translate, FlexForm, SelectField, DateField, NumberField } from 'ra';
 import config from '../../Config';
 
 class ShowPostJob extends Component {

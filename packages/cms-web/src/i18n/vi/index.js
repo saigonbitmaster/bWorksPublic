@@ -1,4 +1,4 @@
-import { vi } from 'ra-loopback3';
+import { vi } from 'ra';
 import generic from './generic';
 import resources from './resources';
 import error from './error';

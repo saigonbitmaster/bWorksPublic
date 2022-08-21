@@ -1,4 +1,4 @@
-import { CUSTOM } from 'ra-loopback3';
+import { CUSTOM } from 'ra';
 
 export default async dataProvider => {
   let total = 100;

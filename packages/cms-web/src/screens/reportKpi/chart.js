@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Create, FlexForm, TextInput, required, translate, EditorInput, DateTimeInput } from 'ra-loopback3';
+import { Create, FlexForm, TextInput, required, translate, EditorInput, DateTimeInput } from 'ra';
 import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import { PasswordInput } from 'react-admin';

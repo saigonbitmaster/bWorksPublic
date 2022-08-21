@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { push } from 'react-router-redux';
 import { compose } from 'recompose';
-import { SelectInput, translate, withDataProvider, CUSTOM } from 'ra-loopback3';
+import { SelectInput, translate, withDataProvider, CUSTOM } from 'ra';
 import { connect } from 'react-redux';
 
 // hien thi cac Dma cua 1 level

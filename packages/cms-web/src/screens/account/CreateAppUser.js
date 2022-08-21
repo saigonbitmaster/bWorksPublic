@@ -8,7 +8,7 @@ import {
   CUSTOM,
   translate,
   BooleanInput
-} from 'ra-loopback3';
+} from 'ra';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CustomSelectArrayInput from '../../components/common/field/CustomSelectArrayInput';

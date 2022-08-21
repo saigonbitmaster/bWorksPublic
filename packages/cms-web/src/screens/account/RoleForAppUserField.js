@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles/';
-import { CUSTOM, withDataProvider, translate } from 'ra-loopback3';
+import { CUSTOM, withDataProvider, translate } from 'ra';
 
 const styles = theme => ({
   chip: {

@@ -1,4 +1,3 @@
-//tham khảo: https://www.epa.ie/pubs/advice/water/quality/Water_Quality.pdf
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -16,7 +15,7 @@ import {
   ArrayField,
   SingleFieldList,
   ChipField, BooleanField
-} from 'ra-loopback3';
+} from 'ra';
 import {Chip} from "@material-ui/core"
 import { compose } from 'recompose';
 import config from '../../Config';

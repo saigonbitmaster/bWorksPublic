@@ -1,4 +1,4 @@
-import { Edit, SimpleForm, TextInput, required, email, CUSTOM, withDataProvider, translate, BooleanInput } from 'ra-loopback3';
+import { Edit, SimpleForm, TextInput, required, email, CUSTOM, withDataProvider, translate, BooleanInput } from 'ra';
 import React, { Component } from 'react';
 import compose from 'recompose/compose';
 import PropTypes from 'prop-types';

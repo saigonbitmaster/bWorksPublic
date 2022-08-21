@@ -1,4 +1,4 @@
-import { en } from 'ra-loopback3';
+import { en } from 'ra';
 import generic from './generic';
 import resources from './resources';
 import error from './error';

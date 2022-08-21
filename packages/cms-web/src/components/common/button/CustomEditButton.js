@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import shouldUpdate from 'recompose/shouldUpdate';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import { Link, linkToRecord, translate } from 'ra-loopback3';
+import { Link, linkToRecord, translate } from 'ra';
 import Button from '@material-ui/core/Button';
 import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';

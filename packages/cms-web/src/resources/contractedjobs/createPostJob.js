@@ -11,7 +11,7 @@ import {
   EditorInput,
   DateTimeInput,
   NumberInput,
-} from 'ra-loopback3';
+} from 'ra';
 import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import config from '../../Config';

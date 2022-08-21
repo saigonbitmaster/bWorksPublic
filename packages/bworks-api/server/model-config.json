@@ -3,7 +3,7 @@
     "sources": [
       "loopback/common/models",
       "loopback/server/models",
-      "ra-loopback3/server/models",
+      "ra/server/models",
       "../common/models",
       "./models",
       "../common/common-models",
@@ -15,7 +15,7 @@
     "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
-      "ra-loopback3/server/mixins",
+      "ra/server/mixins",
       "../common/mixins",
       "./mixins"
     ]

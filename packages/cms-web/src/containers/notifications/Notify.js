@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 import { compose } from 'recompose';
-import { withDataProvider, CUSTOM, translate } from 'ra-loopback3';
+import { withDataProvider, CUSTOM, translate } from 'ra';
 import config from '../../Config';
 
 class Notify extends Component {

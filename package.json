@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "lintPath": "eslint",
     "lintFix": "eslint . --fix",
-    "build-lib": "cd packages/ra-loopback3 && yarn -s build-export",
+    "build-lib": "cd packages/ra && yarn -s build-export",
     "build-login": "cd packages/wlogin-web && yarn -s build",
     "run-api": "cd packages/bworks-api && yarn -s start",
     "run-dev": "cd packages/bworks-api && NODE_ENV=development yarn -s start",

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
+import { translate, withDataProvider, CUSTOM } from 'ra';
 import blue from '@material-ui/core/colors/blue';
 import { FactoryIcon } from '../../../styles/Icons';
 import Icon from '@material-ui/icons/MoneyOutlined'

@@ -6,7 +6,7 @@ import { Button, Grid } from '@material-ui/core';
 import { withStyles, withTheme } from '@material-ui/core/styles';
 // import { Field } from 'redux-form';
 import { Attachment as AttachmentIcon, Delete as DeleteIcon } from '@material-ui/icons';
-import { URL_ONLY, withDataProvider, translate, ArrayInput } from 'ra-loopback3';
+import { URL_ONLY, withDataProvider, translate, ArrayInput } from 'ra';
 // import TextField from '../field/TextField';
 // import { resolve } from '../../../../node_modules/uri-js';
 // import { resolveRedirectTo } from '../../node_modules/ra-core/lib/util';

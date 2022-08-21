@@ -13,7 +13,7 @@ import {
   ArrayInput,
   SelectArrayInput,
   SimpleFormIterator,
-} from 'ra-loopback3';
+} from 'ra';
 import { Grid , Hidden } from '@material-ui/core';
 
 import compose from 'recompose/compose';

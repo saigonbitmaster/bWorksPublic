@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { push } from 'react-router-redux';
 import { compose } from 'recompose';
-import { MonthInput, YearInput, SelectInput, translate, DateInput } from 'ra-loopback3';
+import { MonthInput, YearInput, SelectInput, translate, DateInput } from 'ra';
 import { connect } from 'react-redux';
 import moment from 'moment-timezone';
 const typeTime = [

@@ -9,7 +9,7 @@ import {
   
   EditorInput,
   DateTimeInput,
-} from 'ra-loopback3';
+} from 'ra';
 import { Grid } from '@material-ui/core';
 import compose from 'recompose/compose';
 import { PasswordInput } from 'react-admin';

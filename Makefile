@@ -30,7 +30,7 @@ run-login: ## run cms in development mode
 
 # build
 build-lib:
-	@echo 'Run build ra-loopback3'
+	@echo 'Run build ra'
 	@yarn build-lib
 build-emp: ## run build emp
 	@echo 'Run build emp-web'

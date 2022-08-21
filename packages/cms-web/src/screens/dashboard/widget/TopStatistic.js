@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, withTheme } from '@material-ui/core';
-import { withDataProvider, translate } from 'ra-loopback3';
+import { withDataProvider, translate } from 'ra';
 import { compose } from 'recompose';
 import EmployerSum from './employerSum';
 import JobSeekerSum from './jobSeekerSum';

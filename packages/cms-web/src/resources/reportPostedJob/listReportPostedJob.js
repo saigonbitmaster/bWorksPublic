@@ -1,4 +1,4 @@
-//tham khảo: https://www.epa.ie/pubs/advice/water/quality/Water_Quality.pdf
+//tham khảo: https://www.epa.ie/pubs/advice/some/quality/Water_Quality.pdf
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -13,7 +13,7 @@ import {
   TextInput,
   DateField,
   NumberField,
-} from 'ra-loopback3';
+} from 'ra';
 import { compose } from 'recompose';
 import config from '../../Config';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SelectArrayInput } from 'ra-loopback3';
+import { SelectArrayInput } from 'ra';
 import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 

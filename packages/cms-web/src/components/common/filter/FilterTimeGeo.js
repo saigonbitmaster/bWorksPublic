@@ -9,7 +9,7 @@ import {
   SelectInput,
   MonthInput,
   CUSTOM,
-} from 'ra-loopback3';
+} from 'ra';
 import { Grid, withStyles } from '@material-ui/core';
 import { connect } from 'react-redux';
 import moment from 'moment-timezone';

@@ -7,7 +7,7 @@
       "name": "access_token"
     }
   },
-  "ra-loopback3/server/ContentRange": {
+  "ra/server/ContentRange": {
     "pattern": [
       "*.find",
       "*.mapList"

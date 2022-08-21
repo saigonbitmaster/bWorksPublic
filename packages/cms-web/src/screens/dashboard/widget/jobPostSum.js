@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { translate, withDataProvider, CUSTOM } from 'ra-loopback3';
+import { translate, withDataProvider, CUSTOM } from 'ra';
 import { withTheme } from '@material-ui/core';
 import { ReportVolumeIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';

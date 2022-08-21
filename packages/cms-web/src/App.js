@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 import Geocode from 'react-geocode';
 import { hot } from 'react-hot-loader';
-import { AuthProvider, Master, Title, LoopbackRest, layoutWithProps } from 'ra-loopback3';
+import { AuthProvider, Master, Title, LoopbackRest, layoutWithProps } from 'ra';
 import moment from 'moment-timezone';
 import momentvi from 'moment/locale/vi';
 import i18n from './i18n';

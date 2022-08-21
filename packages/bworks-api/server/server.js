@@ -5,7 +5,7 @@ const path = require('path');
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 const sortedUniq = require('lodash/sortedUniq');
-const commonServer = require('ra-loopback3/server/server');
+const commonServer = require('ra/server/server');
 const dataConfig = require('./data-config');
 const dotenv = require('dotenv');
 

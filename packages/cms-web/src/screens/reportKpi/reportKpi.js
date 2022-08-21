@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { CustomPage, withDataProvider, CUSTOM } from 'ra-loopback3';
+import { CustomPage, withDataProvider, CUSTOM } from 'ra';
 import { Grid, withTheme } from '@material-ui/core';
 
 import Chart from './chart.js';
