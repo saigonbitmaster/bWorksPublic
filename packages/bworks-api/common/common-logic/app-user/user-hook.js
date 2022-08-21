@@ -1,6 +1,6 @@
 var path = require('path');
 
-var senderAddress = 'wateroshelp@gmail.com';
+var senderAddress = 'someoshelp@gmail.com';
 
 module.exports = function(AppUser) {
   //send verification email after registration, custom host and port to use in production with NGINX

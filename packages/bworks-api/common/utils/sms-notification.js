@@ -7,7 +7,7 @@ const SMS_ACCESS_TOKEN = 'dsOL6J0RkL7A9dKpw6Ft0E31GUolVcPa';
 //send sms
 function sendSms(phoneList, message) {
   //let phones = ["0909618609"];
-  //let content = "Water source notification";
+  //let content = " source notification";
   let phones = phoneList;
   let content = message.content;
   let type = 3;
@@ -69,14 +69,14 @@ function sendEmail(emailList, message) {
       service: 'gmail',
       host: 'smtp.gmail.com',
       auth: {
-        user: 'watersupport@Bworks.online',
+        user: 'somesupport@Bworks.online',
         pass: 'Bworks@2017',
       },
     }),
   );
 
   let mailOptions = {
-    from: 'watersupport@Bworks.online',
+    from: 'somesupport@Bworks.online',
     to: emailList,
     subject: message.subject,
     text: message.content,
@@ -103,8 +103,8 @@ module.exports = function(WaterSource) {
     let phoneList = notificationContacts.filter(item => item.id == 'Sms');
     let emailList = notificationContacts.filter(item => item.id == 'Email');
     let message = {
-      subject: 'Water source notification',
-      content: 'There is some alert on water source system',
+      subject: ' source notification',
+      content: 'There is some alert on some source system',
     };
     switch (mode) {
       case 'sms': {

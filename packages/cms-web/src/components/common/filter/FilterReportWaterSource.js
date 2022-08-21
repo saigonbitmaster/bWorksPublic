@@ -42,7 +42,7 @@ class FilterReportWaterSource extends Component {
       allWaterSources: [],
       allWaterParams: [],
 
-      waterSourceChoices: [],
+      someSourceChoices: [],
       selectedWaterSources: [],
       selectedSourceWaterGroup: null,
       selectedWaterSource: null,
@@ -68,26 +68,26 @@ class FilterReportWaterSource extends Component {
 
   getAllWaterGroups = () => {
     let { dataProvider } = this.props;
-    dataProvider(CUSTOM, 'watersourcegroups', { filter: { fields: { id: true, name: true } } }).then(res => {
+    dataProvider(CUSTOM, 'somesourcegroups', { filter: { fields: { id: true, name: true } } }).then(res => {
       this.setState({ allWaterSourceGroups: [...res.data, ...this.selectAll] });
     });
   };
 
   getAllWaterSources = () => {
     let { dataProvider, showWaterParameter } = this.props;
-    dataProvider(CUSTOM, 'watersources', {
-      filter: { fields: { id: true, name: true, waterSourceGroupId: true } },
+    dataProvider(CUSTOM, 'somesources', {
+      filter: { fields: { id: true, name: true, someSourceGroupId: true } },
     }).then(res => {
       if (showWaterParameter) {
         this.setState({
-          waterSourceChoices: [...res.data, ...this.selectAll],
+          someSourceChoices: [...res.data, ...this.selectAll],
           allWaterSources: [...res.data, ...this.selectAll],
           selectedWaterSources: [...res.data, ...this.selectAll],
         });
       } else {
         this.setState(
           {
-            waterSourceChoices: [...res.data, ...this.selectAll],
+            someSourceChoices: [...res.data, ...this.selectAll],
             allWaterSources: [...res.data, ...this.selectAll],
             selectedWaterSources: [...res.data, ...this.selectAll],
           },
@@ -104,24 +104,24 @@ class FilterReportWaterSource extends Component {
 
     //select all
     if (val === this.selectAll[0].id) {
-      this.setState({ waterSourceChoices: allWaterSources });
+      this.setState({ someSourceChoices: allWaterSources });
     } else {
       this.setState({
-        waterSourceChoices: allWaterSources.filter(item => item.waterSourceGroupId === val || item.id === 'all'),
-        selectedWaterSources: allWaterSources.filter(item => item.waterSourceGroupId === val || item.id === 'all'),
+        someSourceChoices: allWaterSources.filter(item => item.someSourceGroupId === val || item.id === 'all'),
+        selectedWaterSources: allWaterSources.filter(item => item.someSourceGroupId === val || item.id === 'all'),
       });
     }
-    change(formName, 'waterSource', 'all');
+    change(formName, 'someSource', 'all');
   };
 
   onChangeWaterSource = (e, val) => {
-    let { waterSourceChoices } = this.state;
+    let { someSourceChoices } = this.state;
     if (val !== this.selectAll[0].id) {
       let selectedWaterSources = [];
       selectedWaterSources.push({ id: val });
       this.setState({ selectedWaterSources: selectedWaterSources });
     } else {
-      let selectedWaterSources = waterSourceChoices.map(({ waterSourceGroupId, name, ...rest }) => rest);
+      let selectedWaterSources = someSourceChoices.map(({ someSourceGroupId, name, ...rest }) => rest);
       this.setState({ selectedWaterSources: selectedWaterSources });
     }
   };
@@ -140,9 +140,9 @@ class FilterReportWaterSource extends Component {
 
   getWaterParams = () => {
     let { formName, change, dataProvider } = this.props;
-    dataProvider(CUSTOM, 'waterparameters', { filter: { fields: { id: true, name: true, symbol: true } } }).then(
+    dataProvider(CUSTOM, 'someparameters', { filter: { fields: { id: true, name: true, symbol: true } } }).then(
       res => {
-        change(formName, 'waterParam', res.data[0].id);
+        change(formName, 'someParam', res.data[0].id);
         this.setState(
           {
             allWaterParams: res.data,
@@ -245,7 +245,7 @@ class FilterReportWaterSource extends Component {
       flgMaterial,
     } = this.props;
 
-    let { allWaterSourceGroups, waterSourceChoices, allWaterParams, filter, conditionChoices } = this.state;
+    let { allWaterSourceGroups, someSourceChoices, allWaterParams, filter, conditionChoices } = this.state;
 
     return (
       <Paper>
@@ -259,15 +259,15 @@ class FilterReportWaterSource extends Component {
               onChange={this.onChangeSourceGroup}
             />
             <SelectInput
-              source="waterSource"
+              source="someSource"
               label={translate('resources.reportmaterials.fields.selectSource')}
-              choices={waterSourceChoices}
+              choices={someSourceChoices}
               style={{ marginLeft: '5px', marginTop: '25px' }}
               onChange={this.onChangeWaterSource}
             />
             {showWaterParameter && (
               <SelectInput
-                source="waterParam"
+                source="someParam"
                 label={translate('resources.reportqualities.fields.selectParameter')}
                 choices={allWaterParams}
                 style={{ marginLeft: '5px', marginTop: '25px' }}
@@ -352,7 +352,7 @@ FilterReportWaterSource.propTypes = {
 
   defaultFilter: PropTypes.object.isRequired,
 
-  showWaterParameter: PropTypes.bool, // show parameter water
+  showWaterParameter: PropTypes.bool, // show parameter some
 
   flgMaterial: PropTypes.bool, // filter of report material
   flgChart: PropTypes.bool, // filter of chart

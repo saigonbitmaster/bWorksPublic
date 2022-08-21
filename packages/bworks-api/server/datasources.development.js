@@ -33,7 +33,7 @@ const email = {
     secure: true,
     port: 465,
     auth: {
-      user: "wateroshelp@gmail.com",
+      user: "someoshelp@gmail.com",
       pass: "vfgq qeaf gzrq kdcq"
     }
   }]

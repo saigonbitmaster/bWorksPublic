@@ -4,7 +4,7 @@ module.exports = app => {
   app.models.Email.send(
     {
       to: 'bitmaster.sg@gmail.com',
-      from: 'wateroshelp@gmail.com',
+      from: 'someoshelp@gmail.com',
       subject: 'bworks is just restarted',
       //if there is no html then text will be email body.
       text: 'bworks is just restarted',
